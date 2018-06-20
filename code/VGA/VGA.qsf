@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY TOP_LEVEL
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:39:24  JUNE 13, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.0
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -76,10 +76,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_G21 -to clk
-set_location_assignment PIN_J6 -to up
-set_location_assignment PIN_H5 -to right
-set_location_assignment PIN_G4 -to left
-set_location_assignment PIN_H6 -to down
 set_global_assignment -name VHDL_FILE TOP_LEVEL.vhd
 set_global_assignment -name QIP_FILE PLL/PLL/PLL/synthesis/PLL.qip
 set_global_assignment -name VHDL_FILE VGA.vhd
@@ -89,4 +85,12 @@ set_global_assignment -name VHDL_FILE types.vhd
 set_global_assignment -name VHDL_FILE GAME_TIMER.vhd
 set_global_assignment -name VHDL_FILE GAME_CONTROLLER.vhd
 set_location_assignment PIN_B1 -to led_out
+set_location_assignment PIN_H6 -to down1
+set_location_assignment PIN_H7 -to down2
+set_location_assignment PIN_J6 -to up1
+set_location_assignment PIN_G5 -to up2
+set_location_assignment PIN_H5 -to left1
+set_location_assignment PIN_J7 -to left2
+set_location_assignment PIN_G4 -to right1
+set_location_assignment PIN_E3 -to right2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

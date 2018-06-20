@@ -2,64 +2,64 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -8.540
-TNS   : -100.820
-
 Type  : Slow 1200mV 85C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -2.013
-TNS   : -2888.347
+Slack : -118.977
+TNS   : -16925.516
+
+Type  : Slow 1200mV 85C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -8.217
+TNS   : -16.434
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : 13.652
+Slack : 14.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.329
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.404
+Slack : 0.405
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.568
+Slack : 0.569
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 4.675
+Slack : 4.389
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 2.662
+Slack : 1.957
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7809.000
+TNS   : -1545.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 4.383
+Slack : 4.384
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
-Slack : 9.687
+Slack : 9.685
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -7.531
-TNS   : -88.732
-
 Type  : Slow 1200mV 0C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -1.686
-TNS   : -2030.055
+Slack : -106.079
+TNS   : -14963.659
+
+Type  : Slow 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -7.256
+TNS   : -14.512
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : 14.248
+Slack : 14.848
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.314
+Slack : 0.299
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
@@ -71,39 +71,39 @@ Slack : 0.510
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 5.112
+Slack : 4.826
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 2.418
+Slack : 1.765
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7809.000
+TNS   : -1545.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
 Slack : 4.378
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : 9.683
+Slack : 9.681
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -4.973
-TNS   : -58.856
-
 Type  : Fast 1200mV 0C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -0.832
-TNS   : -285.842
+Slack : -68.128
+TNS   : -9268.545
+
+Type  : Fast 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -4.763
+TNS   : -9.526
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 16.488
+Slack : 16.852
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.165
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
@@ -111,27 +111,27 @@ Slack : 0.214
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.305
+Slack : 0.304
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 6.656
+Slack : 6.491
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 1.448
+Slack : 1.128
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7809.000
+TNS   : -1545.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 4.412
+Slack : 4.413
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : 9.444
+Slack : 9.442
 TNS   : 0.000
 
 ------------------------------------------------------------

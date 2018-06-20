@@ -8,7 +8,8 @@ port(
 	clk : in std_logic;
 	hsync, vsync :out std_logic;
 	r,g,b : out std_logic_vector(3 downto 0);
-	positions : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
+	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
 );
 end entity;
 
@@ -58,8 +59,17 @@ begin
 				b <= (others => '0');
 			else
 				for i in 0 to MAX_ELEMENTS - 1 loop
-					if(vMatrix = positions(i, 1)) then
-						if(hMatrix = positions(i,0)) then
+					if(vMatrix = player1(i, 1)) then
+						if(hMatrix = player1(i,0)) then
+							r <= (others => '1');
+							g <= (others => '0');
+							b <= (others => '1');
+						end if;
+					end if;
+				end loop;
+				for i in 0 to MAX_ELEMENTS - 1 loop
+					if(vMatrix = player2(i, 1)) then
+						if(hMatrix = player2(i,0)) then
 							r <= (others => '1');
 							g <= (others => '1');
 							b <= (others => '1');

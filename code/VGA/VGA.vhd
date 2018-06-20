@@ -7,7 +7,8 @@ port (
 	clk : in std_logic;
 	VGA_HS, VGA_VS : out std_logic;
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
-	test : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
+	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
 );
 end entity;
 
@@ -27,7 +28,8 @@ port(
 	clk : in std_logic;
 	hsync, vsync :out std_logic;
 	r,g,b : out std_logic_vector(3 downto 0);
-	positions : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1)
+	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
 );
 end component;
 
@@ -47,7 +49,7 @@ signal RESET, VGACLK : std_logic := '1';
 
 signal timer : std_logic;
 begin 
-	C1 : SYNC PORT MAP(VGACLK, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, test);
+	C1 : SYNC PORT MAP(VGACLK, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2);
 	C2 : PLL PORT MAP (clk, RESET, VGACLK);
 
 end main;

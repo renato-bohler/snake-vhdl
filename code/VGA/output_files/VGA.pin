@@ -63,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 CHIP  "VGA"  ASSIGNED TO AN: EP3C16F484C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -202,7 +202,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E2        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1         :                
+right2                       : E3        : input  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
@@ -247,8 +247,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :      
 GND+                         : G1        :        :                   :         : 1         :                
 GND+                         : G2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1         :                
-left                         : G4        : input  : 2.5 V             :         : 1         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 1         :                
+right1                       : G4        : input  : 2.5 V             :         : 1         : Y              
+up2                          : G5        : input  : 2.5 V             :         : 1         : Y              
 VCCA3                        : G6        : power  :                   : 2.5V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8         :                
@@ -270,9 +270,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : H2        :        :                   :         : 1         :                
 GND                          : H3        : gnd    :                   :         :           :                
 VCCIO1                       : H4        : power  :                   : 2.5V    : 1         :                
-right                        : H5        : input  : 2.5 V             :         : 1         : Y              
-down                         : H6        : input  : 2.5 V             :         : 1         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 1         :                
+left1                        : H5        : input  : 2.5 V             :         : 1         : Y              
+down1                        : H6        : input  : 2.5 V             :         : 1         : Y              
+down2                        : H7        : input  : 2.5 V             :         : 1         : Y              
 GND                          : H8        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 8         :                
@@ -293,8 +293,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J2        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1         :                
 GND                          : J5        : gnd    :                   :         :           :                
-up                           : J6        : input  : 2.5 V             :         : 1         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :         : 1         :                
+up1                          : J6        : input  : 2.5 V             :         : 1         : Y              
+left2                        : J7        : input  : 2.5 V             :         : 1         : Y              
 VCCINT                       : J8        : power  :                   : 1.2V    :           :                
 GND                          : J9        : gnd    :                   :         :           :                
 VCCINT                       : J10       : power  :                   : 1.2V    :           :                

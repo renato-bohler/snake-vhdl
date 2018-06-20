@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGA
-Wed Jun 20 15:51:16 2018
-Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Wed Jun 20 16:12:00 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -20,12 +20,16 @@ Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0
  14. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
- 15. Port Connectivity Checks: "GAME_CONTROLLER:gameController"
- 16. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1"
- 17. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
- 18. Port Connectivity Checks: "VGA:vga1|PLL:C2"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 15. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1
+ 17. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1
+ 19. Port Connectivity Checks: "GAME_CONTROLLER:gameController"
+ 20. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1"
+ 21. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
+ 22. Port Connectivity Checks: "VGA:vga1|PLL:C2"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -48,24 +52,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 20 15:51:16 2018      ;
-; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                      ; VGA                                        ;
-; Top-level Entity Name              ; TOP_LEVEL                                  ;
-; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 9,927                                      ;
-;     Total combinational functions  ; 2,300                                      ;
-;     Dedicated logic registers      ; 7,876                                      ;
-; Total registers                    ; 7876                                       ;
-; Total pins                         ; 20                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 1                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 20 16:12:00 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; VGA                                             ;
+; Top-level Entity Name              ; TOP_LEVEL                                       ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 9,113                                           ;
+;     Total combinational functions  ; 7,741                                           ;
+;     Dedicated logic registers      ; 1,602                                           ;
+; Total registers                    ; 1602                                            ;
+; Total pins                         ; 24                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 1                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -161,26 +165,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+-------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                       ; Library ;
-+-------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
-; TOP_LEVEL.vhd                                   ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/TOP_LEVEL.vhd                                   ;         ;
-; PLL/PLL/PLL/synthesis/PLL.v                     ; yes             ; User Verilog HDL File  ; C:/Users/DAELN/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/PLL.v                     ; PLL     ;
-; PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; yes             ; User Verilog HDL File  ; C:/Users/DAELN/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; PLL     ;
-; VGA.vhd                                         ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/VGA.vhd                                         ;         ;
-; SYNC.vhd                                        ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/SYNC.vhd                                        ;         ;
-; PLAYER_CONTROLLER.vhd                           ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/PLAYER_CONTROLLER.vhd                           ;         ;
-; types.vhd                                       ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/types.vhd                                       ;         ;
-; GAME_TIMER.vhd                                  ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/GAME_TIMER.vhd                                  ;         ;
-; GAME_CONTROLLER.vhd                             ; yes             ; User VHDL File         ; C:/Users/DAELN/snake-vhdl/code/VGA/GAME_CONTROLLER.vhd                             ;         ;
-+-------------------------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; TOP_LEVEL.vhd                                   ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/TOP_LEVEL.vhd                                   ;         ;
+; PLL/PLL/PLL/synthesis/PLL.v                     ; yes             ; User Verilog HDL File        ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/PLL.v                     ; PLL     ;
+; PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; yes             ; User Verilog HDL File        ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; PLL     ;
+; VGA.vhd                                         ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/VGA.vhd                                         ;         ;
+; SYNC.vhd                                        ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/SYNC.vhd                                        ;         ;
+; PLAYER_CONTROLLER.vhd                           ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLAYER_CONTROLLER.vhd                           ;         ;
+; types.vhd                                       ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/types.vhd                                       ;         ;
+; GAME_TIMER.vhd                                  ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/GAME_TIMER.vhd                                  ;         ;
+; GAME_CONTROLLER.vhd                             ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/GAME_CONTROLLER.vhd                             ;         ;
+; lpm_divide.tdf                                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                           ;         ;
+; abs_divider.inc                                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                          ;         ;
+; sign_div_unsign.inc                             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                      ;         ;
+; aglobal130.inc                                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                           ;         ;
+; db/lpm_divide_cbm.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/db/lpm_divide_cbm.tdf                           ;         ;
+; db/sign_div_unsign_anh.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/db/sign_div_unsign_anh.tdf                      ;         ;
+; db/alt_u_div_v8f.tdf                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/db/alt_u_div_v8f.tdf                            ;         ;
+; db/add_sub_unc.tdf                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/db/add_sub_unc.tdf                              ;         ;
+; db/add_sub_vnc.tdf                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/db/add_sub_vnc.tdf                              ;         ;
++-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -188,49 +201,66 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 9,927                  ;
+; Estimated Total logic elements              ; 9,113                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 2300                   ;
+; Total combinational functions               ; 7741                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 1941                   ;
-;     -- 3 input functions                    ; 128                    ;
-;     -- <=2 input functions                  ; 231                    ;
+;     -- 4 input functions                    ; 2553                   ;
+;     -- 3 input functions                    ; 2349                   ;
+;     -- <=2 input functions                  ; 2839                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2153                   ;
-;     -- arithmetic mode                      ; 147                    ;
+;     -- normal mode                          ; 5018                   ;
+;     -- arithmetic mode                      ; 2723                   ;
 ;                                             ;                        ;
-; Total registers                             ; 7876                   ;
-;     -- Dedicated logic registers            ; 7876                   ;
+; Total registers                             ; 1602                   ;
+;     -- Dedicated logic registers            ; 1602                   ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 20                     ;
+; I/O pins                                    ; 24                     ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ; Total PLLs                                  ; 1                      ;
 ;     -- PLLs                                 ; 1                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; GAME_TIMER:C3|timerOut ;
-; Maximum fan-out                             ; 7809                   ;
-; Total fan-out                               ; 28251                  ;
-; Average fan-out                             ; 2.77                   ;
+; Maximum fan-out                             ; 1545                   ;
+; Total fan-out                               ; 26795                  ;
+; Average fan-out                             ; 2.85                   ;
 +---------------------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                           ; Library Name ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+--------------+
-; |TOP_LEVEL                                 ; 2300 (0)          ; 7876 (0)     ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |TOP_LEVEL                                                                    ;              ;
-;    |GAME_CONTROLLER:gameController|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                     ;              ;
-;    |GAME_TIMER:C3|                         ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_TIMER:C3                                                      ;              ;
-;    |PLAYER_CONTROLLER:p1|                  ; 198 (198)         ; 7808 (7808)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                               ;              ;
-;    |VGA:vga1|                              ; 2058 (0)          ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1                                                           ;              ;
-;       |PLL:C2|                             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2                                                    ;              ;
-;          |PLL_altpll_0:altpll_0|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                              ;              ;
-;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1 ;              ;
-;       |SYNC:C1|                            ; 2058 (2058)       ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                   ;              ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |TOP_LEVEL                                 ; 7741 (0)          ; 1602 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |TOP_LEVEL                                                                                                                      ; work         ;
+;    |GAME_CONTROLLER:gameController|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                                                                       ; work         ;
+;    |GAME_TIMER:C3|                         ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_TIMER:C3                                                                                                        ; work         ;
+;    |PLAYER_CONTROLLER:p1|                  ; 3611 (411)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                                                                                 ; work         ;
+;       |lpm_divide:Mod0|                    ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_anh:divider|  ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
+;                |alt_u_div_v8f:divider|     ; 1589 (1589)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
+;       |lpm_divide:Mod1|                    ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_anh:divider|  ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
+;                |alt_u_div_v8f:divider|     ; 1611 (1611)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
+;    |PLAYER_CONTROLLER:p2|                  ; 3611 (411)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
+;       |lpm_divide:Mod0|                    ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_anh:divider|  ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
+;                |alt_u_div_v8f:divider|     ; 1589 (1589)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
+;       |lpm_divide:Mod1|                    ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_anh:divider|  ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
+;                |alt_u_div_v8f:divider|     ; 1611 (1611)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
+;    |VGA:vga1|                              ; 475 (0)           ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1                                                                                                             ; work         ;
+;       |PLL:C2|                             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2                                                                                                      ; PLL          ;
+;          |PLL_altpll_0:altpll_0|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                                                                                ; PLL          ;
+;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1                                                   ; PLL          ;
+;       |SYNC:C1|                            ; 475 (475)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ; work         ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -244,14 +274,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------+--------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+--------------------------------------------------+--------------------------------------+
-; Register name                                    ; Reason for Removal                   ;
-+--------------------------------------------------+--------------------------------------+
-; VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|prev_reset ; Stuck at GND due to stuck port clear ;
-; Total Number of Removed Registers = 1            ;                                      ;
-+--------------------------------------------------+--------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++----------------------------------------------------+-------------------------------------------------------+
+; Register name                                      ; Reason for Removal                                    ;
++----------------------------------------------------+-------------------------------------------------------+
+; VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|prev_reset   ; Stuck at GND due to stuck port clear                  ;
+; VGA:vga1|SYNC:C1|b[1..3]                           ; Merged with VGA:vga1|SYNC:C1|b[0]                     ;
+; VGA:vga1|SYNC:C1|r[0..3]                           ; Merged with VGA:vga1|SYNC:C1|b[0]                     ;
+; VGA:vga1|SYNC:C1|g[1..3]                           ; Merged with VGA:vga1|SYNC:C1|g[0]                     ;
+; PLAYER_CONTROLLER:p2|player_direction[3..9,11..30] ; Merged with PLAYER_CONTROLLER:p2|player_direction[10] ;
+; PLAYER_CONTROLLER:p1|player_direction[3..9,11..30] ; Merged with PLAYER_CONTROLLER:p1|player_direction[10] ;
+; PLAYER_CONTROLLER:p2|player_direction[10]          ; Stuck at GND due to stuck port data_in                ;
+; PLAYER_CONTROLLER:p1|player_direction[10]          ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 67             ;                                                       ;
++----------------------------------------------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -259,138 +296,120 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7876  ;
+; Total registers                              ; 1602  ;
 ; Number of registers using Synchronous Clear  ; 54    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Synchronous Load   ; 60    ;
+; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3926  ;
+; Number of registers using Clock Enable       ; 715   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------+
-; Inverted Register Statistics                        ;
-+-------------------------------------------+---------+
-; Inverted Register                         ; Fan out ;
-+-------------------------------------------+---------+
-; PLAYER_CONTROLLER:p1|player[0][0][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[0][0][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[0][1][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[0][1][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[2][0][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[2][0][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[2][1][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[2][1][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[8][0][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[8][0][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[8][1][0]      ; 1       ;
-; PLAYER_CONTROLLER:p1|player[8][1][31]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[10][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[10][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[10][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[10][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[12][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[12][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[12][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[12][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[14][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[14][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[14][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[14][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[16][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[16][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[16][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[16][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[18][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[18][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[18][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[18][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[20][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[20][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[20][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[20][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[22][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[22][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[22][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[22][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[24][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[24][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[24][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[24][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[26][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[26][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[26][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[26][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[28][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[28][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[28][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[28][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[30][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[30][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[30][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[30][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[32][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[32][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[32][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[32][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[34][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[34][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[34][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[34][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[36][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[36][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[36][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[36][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[38][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[38][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[38][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[38][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[40][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[40][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[40][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[40][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[42][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[42][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[42][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[42][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[44][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[44][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[44][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[44][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[46][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[46][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[46][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[46][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[48][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[48][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[48][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[48][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[50][0][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[50][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[50][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[50][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[52][0][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[52][1][31]    ; 1       ;
-; PLAYER_CONTROLLER:p1|player[52][1][0]     ; 1       ;
-; PLAYER_CONTROLLER:p1|player[52][0][0]     ; 1       ;
-; Total number of inverted registers = 367* ;         ;
-+-------------------------------------------+---------+
-* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; PLAYER_CONTROLLER:p2|player[0][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[1][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[1][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[1][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[1][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[5][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[5][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[5][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[5][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[4][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[4][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[4][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[4][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[3][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[3][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[3][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[3][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[2][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[2][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[2][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[2][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[1][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[1][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[1][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[1][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[0][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[0][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p1|player[0][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[0][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player_position[0][0][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_position[0][0][1] ; 6       ;
+; PLAYER_CONTROLLER:p2|player_position[0][1][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_position[2][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[2][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[1][0][1] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[1][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[3][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[3][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[5][0][0] ; 1       ;
+; PLAYER_CONTROLLER:p1|player_position[5][1][0] ; 1       ;
+; PLAYER_CONTROLLER:p1|player_position[4][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[4][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[3][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[3][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[4][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[4][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[2][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[2][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[1][0][1] ; 2       ;
+; PLAYER_CONTROLLER:p1|player_position[1][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[5][0][0] ; 1       ;
+; PLAYER_CONTROLLER:p2|player_position[5][1][0] ; 1       ;
+; PLAYER_CONTROLLER:p1|player_position[0][0][0] ; 7       ;
+; PLAYER_CONTROLLER:p1|player_position[0][0][1] ; 6       ;
+; PLAYER_CONTROLLER:p1|player_position[0][1][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_direction[31]     ; 7       ;
+; PLAYER_CONTROLLER:p2|player_direction[0]      ; 10      ;
+; PLAYER_CONTROLLER:p1|player_direction[0]      ; 9       ;
+; PLAYER_CONTROLLER:p1|player_direction[31]     ; 7       ;
+; Total number of inverted registers = 78       ;         ;
++-----------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][31]  ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][13]  ;
-; 5:1                ; 3720 bits ; 11160 LEs     ; 0 LEs                ; 11160 LEs              ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[60][0][10] ;
-; 64:1               ; 12 bits   ; 504 LEs       ; 12 LEs               ; 492 LEs                ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|r[0]                           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][1]   ;
-; 5:1                ; 120 bits  ; 360 LEs       ; 0 LEs                ; 360 LEs                ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[1][0][1]   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][31] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][31] ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][2]  ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][1][10] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[1]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[1]       ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|b[0]                          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][1]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][0]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[0]       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[0]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -411,395 +430,121 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------+------+---------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GAME_CONTROLLER:gameController"                                                                           ;
-+----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                       ; Type   ; Severity ; Details                                                                             ;
-+----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; gamestart                  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[0][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[0][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[0][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[0][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[0][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[0][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[1][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[1][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[1][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[1][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[1][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[1][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[2][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[2][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[2][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[2][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[2][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[2][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[3][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[3][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[3][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[3][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[3][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[3][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[4][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[4][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[4][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[4][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[4][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[4][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[5][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[5][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[5][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[5][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[5][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[5][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[6][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[6][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[6][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[6][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[6][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[6][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[7][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[7][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[7][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[7][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[7][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[7][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[8][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[8][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[8][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[8][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[8][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[8][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[9][0][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[9][0][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[9][0][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[9][1][30..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[9][1][31]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[9][1][0]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[10][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[10][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[10][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[10][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[10][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[10][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[11][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[11][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[11][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[11][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[11][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[11][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[12][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[12][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[12][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[12][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[12][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[12][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[13][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[13][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[13][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[13][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[13][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[13][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[14][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[14][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[14][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[14][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[14][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[14][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[15][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[15][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[15][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[15][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[15][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[15][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[16][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[16][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[16][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[16][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[16][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[16][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[17][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[17][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[17][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[17][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[17][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[17][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[18][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[18][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[18][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[18][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[18][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[18][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[19][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[19][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[19][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[19][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[19][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[19][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[20][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[20][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[20][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[20][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[20][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[20][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[21][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[21][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[21][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[21][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[21][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[21][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[22][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[22][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[22][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[22][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[22][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[22][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[23][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[23][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[23][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[23][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[23][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[23][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[24][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[24][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[24][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[24][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[24][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[24][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[25][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[25][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[25][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[25][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[25][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[25][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[26][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[26][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[26][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[26][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[26][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[26][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[27][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[27][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[27][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[27][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[27][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[27][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[28][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[28][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[28][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[28][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[28][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[28][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[29][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[29][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[29][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[29][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[29][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[29][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[30][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[30][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[30][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[30][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[30][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[30][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[31][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[31][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[31][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[31][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[31][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[31][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[32][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[32][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[32][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[32][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[32][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[32][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[33][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[33][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[33][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[33][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[33][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[33][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[34][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[34][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[34][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[34][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[34][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[34][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[35][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[35][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[35][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[35][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[35][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[35][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[36][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[36][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[36][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[36][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[36][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[36][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[37][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[37][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[37][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[37][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[37][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[37][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[38][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[38][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[38][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[38][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[38][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[38][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[39][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[39][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[39][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[39][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[39][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[39][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[40][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[40][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[40][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[40][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[40][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[40][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[41][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[41][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[41][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[41][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[41][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[41][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[42][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[42][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[42][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[42][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[42][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[42][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[43][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[43][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[43][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[43][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[43][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[43][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[44][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[44][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[44][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[44][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[44][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[44][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[45][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[45][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[45][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[45][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[45][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[45][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[46][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[46][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[46][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[46][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[46][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[46][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[47][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[47][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[47][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[47][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[47][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[47][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[48][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[48][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[48][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[48][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[48][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[48][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[49][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[49][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[49][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[49][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[49][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[49][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[50][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[50][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[50][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[50][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[50][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[50][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[51][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[51][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[51][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[51][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[51][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[51][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[52][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[52][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[52][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[52][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[52][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[52][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[53][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[53][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[53][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[53][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[53][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[53][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[54][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[54][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[54][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[54][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[54][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[54][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[55][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[55][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[55][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[55][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[55][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[55][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[56][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[56][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[56][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[56][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[56][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[56][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[57][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[57][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[57][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[57][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[57][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[57][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[58][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[58][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[58][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[58][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[58][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[58][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[59][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[59][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[59][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[59][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[59][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[59][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[60][0][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[60][0][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[60][0][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[60][1][30..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; snake2matrix[60][1][31]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; snake2matrix[60][1][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; applematrix[0][31..1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; applematrix[0][0]          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; applematrix[1][31..1]      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; applematrix[1][0]          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; specialmatrix[0][31..2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; specialmatrix[0][1]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; specialmatrix[0][0]        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; specialmatrix[1][31..2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; specialmatrix[1][1]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; specialmatrix[1][0]        ; Input  ; Info     ; Stuck at GND                                                                        ;
-; score1                     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; score2                     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake1ateapple             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake2ateapple             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake1atespecial           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake2atespecial           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GAME_CONTROLLER:gameController"                                                                        ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                    ; Type   ; Severity ; Details                                                                             ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; gamestart               ; Input  ; Info     ; Stuck at GND                                                                        ;
+; applematrix[0][31..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; applematrix[0][0]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; applematrix[1][31..1]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; applematrix[1][0]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; specialmatrix[0][31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; specialmatrix[0][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; specialmatrix[0][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; specialmatrix[1][31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; specialmatrix[1][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; specialmatrix[1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; score1                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; score2                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; snake1ateapple          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; snake2ateapple          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; snake1atespecial        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; snake2atespecial        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -842,7 +587,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -850,9 +595,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 20 15:51:01 2018
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jun 20 16:11:39 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
@@ -883,30 +628,34 @@ Info (12021): Found 2 design units, including 1 entities, in source file game_co
     Info (12022): Found design unit 1: GAME_CONTROLLER-main
     Info (12023): Found entity 1: GAME_CONTROLLER
 Info (12127): Elaborating entity "TOP_LEVEL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at TOP_LEVEL.vhd(63): used implicit default value for signal "player2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(65): object "score1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(65): object "score2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake1AteApple" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake2AteApple" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake1AteSpecial" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake2AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(67): object "score1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(67): object "score2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake1AteApple" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake2AteApple" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake1AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake2AteSpecial" assigned a value but never read
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "GAME_TIMER" for hierarchy "GAME_TIMER:C3"
 Info (12128): Elaborating entity "PLAYER_CONTROLLER" for hierarchy "PLAYER_CONTROLLER:p1"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player_position" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player" into its bus
 Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga1"
-Warning (10540): VHDL Signal Declaration warning at VGA.vhd(46): used explicit default value for signal "RESET" because signal was never assigned a value
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "test" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "test" into its bus
+Warning (10540): VHDL Signal Declaration warning at VGA.vhd(48): used explicit default value for signal "RESET" because signal was never assigned a value
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "SYNC" for hierarchy "VGA:vga1|SYNC:C1"
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(107): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(112): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at SYNC.vhd(117): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(117): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "positions" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "positions" into its bus
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(122): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(127): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(127): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "PLL" for hierarchy "VGA:vga1|PLL:C2"
 Info (12128): Elaborating entity "PLL_altpll_0" for hierarchy "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
 Info (12128): Elaborating entity "PLL_altpll_0_stdsync_sv6" for hierarchy "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2"
@@ -923,18 +672,45 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake1Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod1"
+Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p1|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p1|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cbm.tdf
+    Info (12023): Found entity 1: lpm_divide_cbm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_anh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_anh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_v8f.tdf
+    Info (12023): Found entity 1: alt_u_div_v8f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p1|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p1|lpm_divide:Mod1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "33"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9950 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Info (21057): Implemented 9140 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 9929 logic cells
+    Info (21061): Implemented 9115 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 434 megabytes
-    Info: Processing ended: Wed Jun 20 15:51:16 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:15
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 626 megabytes
+    Info: Processing ended: Wed Jun 20 16:12:00 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:20
 
 

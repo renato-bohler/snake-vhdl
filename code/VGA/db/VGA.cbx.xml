@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="VGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_cbm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_cbm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_cbm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_cbm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
