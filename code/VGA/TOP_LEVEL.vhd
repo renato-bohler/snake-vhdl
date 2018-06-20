@@ -29,7 +29,8 @@ port (
 	VGA_HS, VGA_VS : out std_logic;
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
 	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
-	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
+	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+	apple_position : in coordinate
 );
 end component;
 
@@ -61,18 +62,30 @@ component GAME_CONTROLLER IS
 	);
 end component;
 
+component APPLE_CONTROLLER IS
+	port (
+		clk 	  : in std_logic;
+		player1AteApple 	  : in std_logic;
+		player2AteApple 	  : in std_logic;
+		player1 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
+		player2 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
+		apple_position : out coordinate
+	);
+end component;
+
 signal player1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 
 signal score1, score2 : integer;
 signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer : std_logic;
-
+signal apple_position : coordinate;
 begin
 
 	C3 : GAME_TIMER PORT MAP (clk, timer);
+	Apple : APPLE_CONTROLLER PORT MAP (clk, snake1AteApple, snake2AteApple, player1, player2, apple_position);
 	p1 : PLAYER_CONTROLLER PORT MAP (timer, up1, down1, left1, right1, player1);
 	p2 : PLAYER_CONTROLLER PORT MAP (timer, up2, down2, left2, right2, player2);
-	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2);
+	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, (1, 1), (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
 
 	-- Debug

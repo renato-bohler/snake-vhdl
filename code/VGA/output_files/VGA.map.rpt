@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Wed Jun 20 16:12:00 2018
+Wed Jun 20 16:53:34 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,10 +20,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0
  14. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
- 15. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0
- 16. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1
- 17. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1
+ 15. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1
+ 17. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0
+ 18. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1
  19. Port Connectivity Checks: "GAME_CONTROLLER:gameController"
  20. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1"
  21. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
@@ -55,15 +55,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 20 16:12:00 2018           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 20 16:53:34 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; VGA                                             ;
 ; Top-level Entity Name              ; TOP_LEVEL                                       ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 9,113                                           ;
-;     Total combinational functions  ; 7,741                                           ;
-;     Dedicated logic registers      ; 1,602                                           ;
-; Total registers                    ; 1602                                            ;
+; Total logic elements               ; 9,118                                           ;
+;     Total combinational functions  ; 7,746                                           ;
+;     Dedicated logic registers      ; 1,603                                           ;
+; Total registers                    ; 1603                                            ;
 ; Total pins                         ; 24                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -175,6 +175,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
 +-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; APPLE_CONTROLLER.vhd                            ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/APPLE_CONTROLLER.vhd                            ;         ;
 ; TOP_LEVEL.vhd                                   ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/TOP_LEVEL.vhd                                   ;         ;
 ; PLL/PLL/PLL/synthesis/PLL.v                     ; yes             ; User Verilog HDL File        ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/PLL.v                     ; PLL     ;
 ; PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; yes             ; User Verilog HDL File        ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/submodules/PLL_altpll_0.v ; PLL     ;
@@ -201,20 +202,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 9,113                  ;
+; Estimated Total logic elements              ; 9,118                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 7741                   ;
+; Total combinational functions               ; 7746                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 2553                   ;
-;     -- 3 input functions                    ; 2349                   ;
-;     -- <=2 input functions                  ; 2839                   ;
+;     -- 4 input functions                    ; 2559                   ;
+;     -- 3 input functions                    ; 2377                   ;
+;     -- <=2 input functions                  ; 2810                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 5018                   ;
+;     -- normal mode                          ; 5023                   ;
 ;     -- arithmetic mode                      ; 2723                   ;
 ;                                             ;                        ;
-; Total registers                             ; 1602                   ;
-;     -- Dedicated logic registers            ; 1602                   ;
+; Total registers                             ; 1603                   ;
+;     -- Dedicated logic registers            ; 1603                   ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 24                     ;
@@ -224,8 +225,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; GAME_TIMER:C3|timerOut ;
 ; Maximum fan-out                             ; 1545                   ;
-; Total fan-out                               ; 26795                  ;
-; Average fan-out                             ; 2.85                   ;
+; Total fan-out                               ; 26849                  ;
+; Average fan-out                             ; 2.86                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -234,7 +235,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_LEVEL                                 ; 7741 (0)          ; 1602 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |TOP_LEVEL                                                                                                                      ; work         ;
+; |TOP_LEVEL                                 ; 7746 (0)          ; 1603 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |TOP_LEVEL                                                                                                                      ; work         ;
 ;    |GAME_CONTROLLER:gameController|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                                                                       ; work         ;
 ;    |GAME_TIMER:C3|                         ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_TIMER:C3                                                                                                        ; work         ;
 ;    |PLAYER_CONTROLLER:p1|                  ; 3611 (411)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                                                                                 ; work         ;
@@ -246,7 +247,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_anh:divider|  ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
 ;                |alt_u_div_v8f:divider|     ; 1611 (1611)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;    |PLAYER_CONTROLLER:p2|                  ; 3611 (411)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
+;    |PLAYER_CONTROLLER:p2|                  ; 3612 (412)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
 ;       |lpm_divide:Mod0|                    ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0                                                                                 ; work         ;
 ;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_anh:divider|  ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
@@ -255,11 +256,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_anh:divider|  ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
 ;                |alt_u_div_v8f:divider|     ; 1611 (1611)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;    |VGA:vga1|                              ; 475 (0)           ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1                                                                                                             ; work         ;
+;    |VGA:vga1|                              ; 479 (0)           ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1                                                                                                             ; work         ;
 ;       |PLL:C2|                             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2                                                                                                      ; PLL          ;
 ;          |PLL_altpll_0:altpll_0|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                                                                                ; PLL          ;
 ;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1                                                   ; PLL          ;
-;       |SYNC:C1|                            ; 475 (475)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ; work         ;
+;       |SYNC:C1|                            ; 479 (479)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ; work         ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -281,13 +282,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+-------------------------------------------------------+
 ; VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|prev_reset   ; Stuck at GND due to stuck port clear                  ;
 ; VGA:vga1|SYNC:C1|b[1..3]                           ; Merged with VGA:vga1|SYNC:C1|b[0]                     ;
-; VGA:vga1|SYNC:C1|r[0..3]                           ; Merged with VGA:vga1|SYNC:C1|b[0]                     ;
+; VGA:vga1|SYNC:C1|r[1..3]                           ; Merged with VGA:vga1|SYNC:C1|r[0]                     ;
 ; VGA:vga1|SYNC:C1|g[1..3]                           ; Merged with VGA:vga1|SYNC:C1|g[0]                     ;
 ; PLAYER_CONTROLLER:p2|player_direction[3..9,11..30] ; Merged with PLAYER_CONTROLLER:p2|player_direction[10] ;
 ; PLAYER_CONTROLLER:p1|player_direction[3..9,11..30] ; Merged with PLAYER_CONTROLLER:p1|player_direction[10] ;
 ; PLAYER_CONTROLLER:p2|player_direction[10]          ; Stuck at GND due to stuck port data_in                ;
 ; PLAYER_CONTROLLER:p1|player_direction[10]          ; Stuck at GND due to stuck port data_in                ;
-; Total Number of Removed Registers = 67             ;                                                       ;
+; Total Number of Removed Registers = 66             ;                                                       ;
 +----------------------------------------------------+-------------------------------------------------------+
 
 
@@ -296,12 +297,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1602  ;
+; Total registers                              ; 1603  ;
 ; Number of registers using Synchronous Clear  ; 54    ;
 ; Number of registers using Synchronous Load   ; 60    ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 715   ;
+; Number of registers using Clock Enable       ; 716   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -311,26 +312,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
-; PLAYER_CONTROLLER:p2|player[0][0][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[0][0][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[0][1][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[0][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[2][0][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[2][0][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[2][1][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[2][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[3][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[5][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[4][1][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p2|player[1][0][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p2|player[1][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p2|player[1][1][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p2|player[1][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p1|player[5][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[3][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[3][0][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[3][0][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[3][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][0][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[2][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][1][31]         ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][0][0]          ; 1       ;
+; PLAYER_CONTROLLER:p2|player[0][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[5][0][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[5][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[5][1][0]          ; 1       ;
+; PLAYER_CONTROLLER:p1|player[5][1][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[4][0][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[4][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[4][1][0]          ; 1       ;
@@ -339,10 +348,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|player[3][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[3][1][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[3][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[4][0][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[4][0][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[4][1][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[4][1][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[2][0][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[2][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[2][1][0]          ; 1       ;
@@ -351,42 +356,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|player[1][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[1][1][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[1][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[5][0][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[5][0][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player[5][1][0]          ; 1       ;
-; PLAYER_CONTROLLER:p2|player[5][1][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[0][0][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[0][0][31]         ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[0][1][0]          ; 1       ;
 ; PLAYER_CONTROLLER:p1|player[0][1][31]         ; 1       ;
-; PLAYER_CONTROLLER:p2|player_position[0][0][0] ; 7       ;
-; PLAYER_CONTROLLER:p2|player_position[0][0][1] ; 6       ;
-; PLAYER_CONTROLLER:p2|player_position[0][1][0] ; 7       ;
-; PLAYER_CONTROLLER:p2|player_position[2][0][0] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[2][1][0] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[1][0][1] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[1][1][0] ; 2       ;
 ; PLAYER_CONTROLLER:p2|player_position[3][0][0] ; 2       ;
 ; PLAYER_CONTROLLER:p2|player_position[3][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[5][0][0] ; 1       ;
+; PLAYER_CONTROLLER:p2|player_position[5][1][0] ; 1       ;
+; PLAYER_CONTROLLER:p2|player_position[4][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[4][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[1][0][1] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[1][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[2][0][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[2][1][0] ; 2       ;
+; PLAYER_CONTROLLER:p2|player_position[0][1][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_position[0][0][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_position[0][0][1] ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[5][0][0] ; 1       ;
 ; PLAYER_CONTROLLER:p1|player_position[5][1][0] ; 1       ;
 ; PLAYER_CONTROLLER:p1|player_position[4][0][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[4][1][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[3][0][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[3][1][0] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[4][0][0] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[4][1][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[2][0][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[2][1][0] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[1][0][1] ; 2       ;
 ; PLAYER_CONTROLLER:p1|player_position[1][1][0] ; 2       ;
-; PLAYER_CONTROLLER:p2|player_position[5][0][0] ; 1       ;
-; PLAYER_CONTROLLER:p2|player_position[5][1][0] ; 1       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][0] ; 7       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][1] ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][1][0] ; 7       ;
+; PLAYER_CONTROLLER:p2|player_direction[0]      ; 9       ;
 ; PLAYER_CONTROLLER:p2|player_direction[31]     ; 7       ;
-; PLAYER_CONTROLLER:p2|player_direction[0]      ; 10      ;
 ; PLAYER_CONTROLLER:p1|player_direction[0]      ; 9       ;
 ; PLAYER_CONTROLLER:p1|player_direction[31]     ; 7       ;
 ; Total number of inverted registers = 78       ;         ;
@@ -399,14 +400,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][31] ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][31] ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][2]  ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][1][10] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][30] ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][5]  ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][1][25] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[1]       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[1]       ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|b[0]                          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[2]       ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|b[0]                          ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][1]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][0]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][1]  ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[0]       ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[0]       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
@@ -428,52 +429,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------+------+---------------------------------------------------------------------------------+
 ; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                               ;
 +---------------------------------+-------+------+---------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 33             ; Untyped                                     ;
-; LPM_WIDTHD             ; 32             ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 33             ; Untyped                                     ;
-; LPM_WIDTHD             ; 32             ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------+
@@ -522,6 +477,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 33             ; Untyped                                     ;
+; LPM_WIDTHD             ; 32             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_cbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "GAME_CONTROLLER:gameController"                                                                        ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -540,8 +541,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; specialmatrix[1][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; score1                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; score2                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake1ateapple          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; snake2ateapple          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; snake1atespecial        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; snake2atespecial        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -587,7 +586,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -597,9 +596,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 20 16:11:39 2018
+    Info: Processing started: Wed Jun 20 16:53:19 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file apple_controller.vhd
+    Info (12022): Found design unit 1: APPLE_CONTROLLER-main
+    Info (12023): Found entity 1: APPLE_CONTROLLER
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
     Info (12022): Found design unit 1: TOP_LEVEL-main
     Info (12023): Found entity 1: TOP_LEVEL
@@ -628,30 +630,108 @@ Info (12021): Found 2 design units, including 1 entities, in source file game_co
     Info (12022): Found design unit 1: GAME_CONTROLLER-main
     Info (12023): Found entity 1: GAME_CONTROLLER
 Info (12127): Elaborating entity "TOP_LEVEL" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(67): object "score1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(67): object "score2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake1AteApple" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake2AteApple" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake1AteSpecial" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(68): object "snake2AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(79): object "score1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(79): object "score2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(80): object "snake1AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(80): object "snake2AteSpecial" assigned a value but never read
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "GAME_TIMER" for hierarchy "GAME_TIMER:C3"
+Info (12128): Elaborating entity "APPLE_CONTROLLER" for hierarchy "APPLE_CONTROLLER:Apple"
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(34): signal "player1AteApple" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(34): signal "player2AteApple" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(34): signal "appleExists" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(39): signal "player1AteApple" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(39): signal "player2AteApple" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(39): signal "appleExists" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(31): inferring latch(es) for signal or variable "apple_position", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(31): inferring latch(es) for signal or variable "appleExists", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at APPLE_CONTROLLER.vhd(31): inferring latch(es) for signal or variable "singleAct", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "appleExists" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][0]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][1]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][2]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][3]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][4]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][5]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][6]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][7]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][8]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][9]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][10]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][11]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][12]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][13]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][14]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][15]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][16]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][17]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][18]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][19]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][20]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][21]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][22]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][23]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][24]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][25]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][26]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][27]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][28]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][29]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][30]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[1][31]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][0]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][1]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][2]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][3]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][4]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][5]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][6]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][7]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][8]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][9]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][10]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][11]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][12]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][13]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][14]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][15]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][16]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][17]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][18]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][19]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][20]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][21]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][22]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][23]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][24]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][25]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][26]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][27]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][28]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][29]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][30]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "apple_position[0][31]" at APPLE_CONTROLLER.vhd(31)
+Info (10041): Inferred latch for "singleAct" at APPLE_CONTROLLER.vhd(34)
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "PLAYER_CONTROLLER" for hierarchy "PLAYER_CONTROLLER:p1"
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player_position" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player" into its bus
 Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vga1"
-Warning (10540): VHDL Signal Declaration warning at VGA.vhd(48): used explicit default value for signal "RESET" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at VGA.vhd(50): used explicit default value for signal "RESET" because signal was never assigned a value
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "SYNC" for hierarchy "VGA:vga1|SYNC:C1"
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(117): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(122): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(127): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at SYNC.vhd(127): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(125): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(130): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(135): signal "hpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SYNC.vhd(135): signal "vpos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
@@ -673,12 +753,12 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake1Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod1"
-Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p1|lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p1|lpm_divide:Mod0" with the following parameter:
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p1|Mod1"
+Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p2|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p2|lpm_divide:Mod0" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -693,8 +773,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_unc
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
     Info (12023): Found entity 1: add_sub_vnc
-Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p1|lpm_divide:Mod1"
-Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p1|lpm_divide:Mod1" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "PLAYER_CONTROLLER:p2|lpm_divide:Mod1"
+Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p2|lpm_divide:Mod1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -702,15 +782,15 @@ Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p1|lpm_divide:Mod1" w
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9140 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9145 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 9115 logic cells
+    Info (21061): Implemented 9120 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 626 megabytes
-    Info: Processing ended: Wed Jun 20 16:12:00 2018
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 607 megabytes
+    Info: Processing ended: Wed Jun 20 16:53:34 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 

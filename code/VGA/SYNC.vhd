@@ -9,7 +9,8 @@ port(
 	hsync, vsync :out std_logic;
 	r,g,b : out std_logic_vector(3 downto 0);
 	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
-	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
+	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+	apple_position : in coordinate
 );
 end entity;
 
@@ -70,12 +71,19 @@ begin
 				for i in 0 to MAX_ELEMENTS - 1 loop
 					if(vMatrix = player2(i, 1)) then
 						if(hMatrix = player2(i,0)) then
-							r <= (others => '1');
-							g <= (others => '1');
+							r <= (others => '0');
+							g <= (others => '0');
 							b <= (others => '1');
 						end if;
 					end if;
 				end loop;
+				if(vMatrix = apple_position(1)) then
+					if(hMatrix = apple_position(0)) then
+						r <= (others => '1');
+						g <= (others => '1');
+						b <= (others => '1');
+					end if;
+				end if;
 --				if(MATRIX(vMatrix,hMatrix) = WHITE) then
 --					r <= (others => '1');
 --					g <= (others => '1');
