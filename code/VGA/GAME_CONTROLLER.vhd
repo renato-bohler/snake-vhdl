@@ -44,11 +44,12 @@ process(gameTick)
 	variable gameRunningVar 		: std_logic := '1';
 
 begin
-	if(gameTick = '1') then
-		gameOver <= '1';
-	else
-		gameOver <= '0';
+
+	if(rising_edge(gameTick)) then
+		gameOverVar := not(gameOverVar);
 	end if;
+	gameOver <= gameOverVar;
+
 end process;
 
 end architecture;

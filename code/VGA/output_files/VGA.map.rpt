@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Wed Jun 20 15:33:26 2018
+Wed Jun 20 15:51:16 2018
 Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -51,15 +51,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 20 15:33:26 2018      ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 20 15:51:16 2018      ;
 ; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; VGA                                        ;
 ; Top-level Entity Name              ; TOP_LEVEL                                  ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 9,926                                      ;
-;     Total combinational functions  ; 2,299                                      ;
-;     Dedicated logic registers      ; 7,875                                      ;
-; Total registers                    ; 7875                                       ;
+; Total logic elements               ; 9,927                                      ;
+;     Total combinational functions  ; 2,300                                      ;
+;     Dedicated logic registers      ; 7,876                                      ;
+; Total registers                    ; 7876                                       ;
 ; Total pins                         ; 20                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -188,20 +188,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 9,926                  ;
+; Estimated Total logic elements              ; 9,927                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 2299                   ;
+; Total combinational functions               ; 2300                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 1941                   ;
 ;     -- 3 input functions                    ; 128                    ;
-;     -- <=2 input functions                  ; 230                    ;
+;     -- <=2 input functions                  ; 231                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2152                   ;
+;     -- normal mode                          ; 2153                   ;
 ;     -- arithmetic mode                      ; 147                    ;
 ;                                             ;                        ;
-; Total registers                             ; 7875                   ;
-;     -- Dedicated logic registers            ; 7875                   ;
+; Total registers                             ; 7876                   ;
+;     -- Dedicated logic registers            ; 7876                   ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 20                     ;
@@ -210,8 +210,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; GAME_TIMER:C3|timerOut ;
-; Maximum fan-out                             ; 7808                   ;
-; Total fan-out                               ; 28247                  ;
+; Maximum fan-out                             ; 7809                   ;
+; Total fan-out                               ; 28251                  ;
 ; Average fan-out                             ; 2.77                   ;
 +---------------------------------------------+------------------------+
 
@@ -221,7 +221,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                           ; Library Name ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------+--------------+
-; |TOP_LEVEL                                 ; 2299 (0)          ; 7875 (0)     ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |TOP_LEVEL                                                                    ;              ;
+; |TOP_LEVEL                                 ; 2300 (0)          ; 7876 (0)     ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |TOP_LEVEL                                                                    ;              ;
+;    |GAME_CONTROLLER:gameController|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                     ;              ;
 ;    |GAME_TIMER:C3|                         ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_TIMER:C3                                                      ;              ;
 ;    |PLAYER_CONTROLLER:p1|                  ; 198 (198)         ; 7808 (7808)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                               ;              ;
 ;    |VGA:vga1|                              ; 2058 (0)          ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1                                                           ;              ;
@@ -258,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 7875  ;
+; Total registers                              ; 7876  ;
 ; Number of registers using Synchronous Clear  ; 54    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 12    ;
@@ -798,7 +799,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; snake2ateapple             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; snake1atespecial           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; snake2atespecial           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; gameover                   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -842,7 +842,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:12     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -852,7 +852,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 20 15:33:07 2018
+    Info: Processing started: Wed Jun 20 15:51:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
@@ -883,7 +883,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file game_co
     Info (12022): Found design unit 1: GAME_CONTROLLER-main
     Info (12023): Found entity 1: GAME_CONTROLLER
 Info (12127): Elaborating entity "TOP_LEVEL" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at TOP_LEVEL.vhd(12): used implicit default value for signal "led_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at TOP_LEVEL.vhd(63): used implicit default value for signal "player2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(65): object "score1" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(65): object "score2" assigned a value but never read
@@ -891,7 +890,6 @@ Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake
 Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake2AteApple" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake1AteSpecial" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "snake2AteSpecial" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(66): object "gameOver" assigned a value but never read
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (12128): Elaborating entity "GAME_TIMER" for hierarchy "GAME_TIMER:C3"
 Info (12128): Elaborating entity "PLAYER_CONTROLLER" for hierarchy "PLAYER_CONTROLLER:p1"
@@ -925,20 +923,18 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake1Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9949 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9950 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 9928 logic cells
+    Info (21061): Implemented 9929 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 441 megabytes
-    Info: Processing ended: Wed Jun 20 15:33:26 2018
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 434 megabytes
+    Info: Processing ended: Wed Jun 20 15:51:16 2018
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 

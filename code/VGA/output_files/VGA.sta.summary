@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -8.556
-TNS   : -100.956
+Slack : -8.540
+TNS   : -100.820
 
 Type  : Slow 1200mV 85C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -2.090
-TNS   : -2860.190
+Slack : -2.013
+TNS   : -2888.347
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : 14.517
+Slack : 13.652
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.338
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.569
+Slack : 0.329
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.571
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.568
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 1.922
+Slack : 4.675
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 2.753
+Slack : 2.662
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7808.000
+TNS   : -7809.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 4.384
+Slack : 4.383
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -47,87 +47,87 @@ Slack : 9.687
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -7.551
-TNS   : -88.929
+Slack : -7.531
+TNS   : -88.732
 
 Type  : Slow 1200mV 0C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -1.702
-TNS   : -1995.713
+Slack : -1.686
+TNS   : -2030.055
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : 15.045
+Slack : 14.248
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.313
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.511
+Slack : 0.314
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.512
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.510
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 2.615
+Slack : 5.112
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 2.491
+Slack : 2.418
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7808.000
+TNS   : -7809.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
 Slack : 4.378
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : 9.682
+Slack : 9.683
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -4.986
-TNS   : -58.974
+Slack : -4.973
+TNS   : -58.856
 
 Type  : Fast 1200mV 0C Model Setup 'GAME_TIMER:C3|timerOut'
-Slack : -0.872
-TNS   : -261.538
+Slack : -0.832
+TNS   : -285.842
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 17.036
+Slack : 16.488
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GAME_TIMER:C3|timerOut'
-Slack : 0.162
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.214
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.305
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.307
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 5.012
+Slack : 6.656
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 1.559
+Slack : 1.448
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GAME_TIMER:C3|timerOut'
 Slack : -1.000
-TNS   : -7808.000
+TNS   : -7809.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 4.413
+Slack : 4.412
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'

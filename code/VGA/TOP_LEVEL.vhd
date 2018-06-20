@@ -72,4 +72,7 @@ begin
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, (1, 1), (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
 
+	-- Debug
+	led_out <= gameOver;
+
 end architecture;
