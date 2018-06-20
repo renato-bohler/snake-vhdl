@@ -14,6 +14,13 @@ end entity;
 
 architecture main of TOP_LEVEL is
 
+component GAME_TIMER is
+	port (
+		clk : in std_logic;
+		timerOut : out std_logic
+	);
+end component;
+
 component VGA is
 port (
 	clk : in std_logic;
@@ -25,17 +32,18 @@ end component;
 
 component PLAYER_CONTROLLER IS
 	port (
-		clk : in std_logic;
+		timer : in std_logic;
 		up, down, left, right : in std_logic;
 		player : out coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
 	);
 end component;
 
 signal player1 : coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1);
-
+signal timer : std_logic;
 begin
 
-	p1 : PLAYER_CONTROLLER PORT MAP (clk, up, down, left, right, player1);
+	C3 : GAME_TIMER PORT MAP (clk, timer);
+	p1 : PLAYER_CONTROLLER PORT MAP (timer, up, down, left, right, player1);
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1);
 
 end architecture;

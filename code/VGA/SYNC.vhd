@@ -58,15 +58,11 @@ begin
 				b <= (others => '0');
 			else
 				for i in 0 to MAX_ELEMENTS - 1 loop
-					if(hMatrix = positions(i, 0)) then
-						if(vMatrix = positions(i,1)) then
+					if(vMatrix = positions(i, 1)) then
+						if(hMatrix = positions(i,0)) then
 							r <= (others => '1');
 							g <= (others => '1');
 							b <= (others => '1');
-						else
-							r <= (others => '0');
-							g <= (others => '0');
-							b <= (others => '0');
 						end if;
 					end if;
 				end loop;
