@@ -8,7 +8,8 @@ entity TOP_LEVEL IS
 		clk : in std_logic;
 		up, down, left, right : in std_logic;
 		VGA_HS, VGA_VS : out std_logic;
-		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0)
+		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
+		led_out : out std_logic
 	);
 end entity;
 
@@ -38,12 +39,37 @@ component PLAYER_CONTROLLER IS
 	);
 end component;
 
+component GAME_CONTROLLER IS
+	port (
+		gameTick 			: in std_logic;
+		gameStart			: in std_logic;
+		snake1Matrix		: in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+		snake2Matrix		: in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
+		appleMatrix			: in coordinate;
+		specialMatrix		: in coordinate;
+		
+		score1				: out integer;
+		score2				: out integer;
+		snake1AteApple		: out std_logic;
+		snake2AteApple		: out std_logic;
+		snake1AteSpecial	: out std_logic;
+		snake2AteSpecial	: out std_logic;
+		gameOver				: out std_logic
+		
+	);
+end component;
+
 signal player1 : coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1);
-signal timer : std_logic;
+signal player2 : coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1);
+
+signal score1, score2 : integer;
+signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer : std_logic;
+
 begin
 
 	C3 : GAME_TIMER PORT MAP (clk, timer);
 	p1 : PLAYER_CONTROLLER PORT MAP (timer, up, down, left, right, player1);
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1);
+	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, (1, 1), (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
 
 end architecture;
