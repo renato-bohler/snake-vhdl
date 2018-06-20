@@ -77,14 +77,8 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_G21 -to clk
 set_location_assignment PIN_B1 -to led_out
-set_location_assignment PIN_H6 -to down1
-set_location_assignment PIN_H7 -to down2
-set_location_assignment PIN_J6 -to up1
-set_location_assignment PIN_G5 -to up2
-set_location_assignment PIN_H5 -to left1
-set_location_assignment PIN_J7 -to left2
-set_location_assignment PIN_G4 -to right1
-set_location_assignment PIN_E3 -to right2
+set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
+set_global_assignment -name VHDL_FILE debounce.vhd
 set_global_assignment -name VHDL_FILE APPLE_CONTROLLER.vhd
 set_global_assignment -name VHDL_FILE TOP_LEVEL.vhd
 set_global_assignment -name QIP_FILE PLL/PLL/PLL/synthesis/PLL.qip
@@ -94,4 +88,6 @@ set_global_assignment -name VHDL_FILE PLAYER_CONTROLLER.vhd
 set_global_assignment -name VHDL_FILE types.vhd
 set_global_assignment -name VHDL_FILE GAME_TIMER.vhd
 set_global_assignment -name VHDL_FILE GAME_CONTROLLER.vhd
+set_location_assignment PIN_P22 -to ps2_clk
+set_location_assignment PIN_P21 -to ps2_data
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

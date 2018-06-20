@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Wed Jun 20 16:53:34 2018
+Wed Jun 20 17:23:33 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -20,16 +20,20 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0
  14. Source assignments for VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
- 15. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0
- 16. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1
- 17. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1
- 19. Port Connectivity Checks: "GAME_CONTROLLER:gameController"
- 20. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1"
- 21. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
- 22. Port Connectivity Checks: "VGA:vga1|PLL:C2"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+ 15. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard
+ 16. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_clk
+ 17. Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_data
+ 18. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod0
+ 19. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p2|lpm_divide:Mod1
+ 20. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod0
+ 21. Parameter Settings for Inferred Entity Instance: PLAYER_CONTROLLER:p1|lpm_divide:Mod1
+ 22. Port Connectivity Checks: "ps2_keyboard:keyboard"
+ 23. Port Connectivity Checks: "GAME_CONTROLLER:gameController"
+ 24. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1"
+ 25. Port Connectivity Checks: "VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0"
+ 26. Port Connectivity Checks: "VGA:vga1|PLL:C2"
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -55,16 +59,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 20 16:53:34 2018           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 20 17:23:33 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; VGA                                             ;
 ; Top-level Entity Name              ; TOP_LEVEL                                       ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 9,118                                           ;
-;     Total combinational functions  ; 7,746                                           ;
-;     Dedicated logic registers      ; 1,603                                           ;
-; Total registers                    ; 1603                                            ;
-; Total pins                         ; 24                                              ;
+; Total logic elements               ; 9,254                                           ;
+;     Total combinational functions  ; 7,841                                           ;
+;     Dedicated logic registers      ; 1,685                                           ;
+; Total registers                    ; 1685                                            ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -175,6 +179,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
 +-------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; ps2_keyboard.vhd                                ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/ps2_keyboard.vhd                                ;         ;
+; debounce.vhd                                    ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/debounce.vhd                                    ;         ;
 ; APPLE_CONTROLLER.vhd                            ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/APPLE_CONTROLLER.vhd                            ;         ;
 ; TOP_LEVEL.vhd                                   ; yes             ; User VHDL File               ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/TOP_LEVEL.vhd                                   ;         ;
 ; PLL/PLL/PLL/synthesis/PLL.v                     ; yes             ; User Verilog HDL File        ; C:/Users/gusta/Desktop/snake-vhdl/code/VGA/PLL/PLL/PLL/synthesis/PLL.v                     ; PLL     ;
@@ -202,30 +208,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 9,118                  ;
+; Estimated Total logic elements              ; 9,254                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 7746                   ;
+; Total combinational functions               ; 7841                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 2559                   ;
-;     -- 3 input functions                    ; 2377                   ;
-;     -- <=2 input functions                  ; 2810                   ;
+;     -- 4 input functions                    ; 2611                   ;
+;     -- 3 input functions                    ; 2385                   ;
+;     -- <=2 input functions                  ; 2845                   ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 5023                   ;
-;     -- arithmetic mode                      ; 2723                   ;
+;     -- normal mode                          ; 5091                   ;
+;     -- arithmetic mode                      ; 2750                   ;
 ;                                             ;                        ;
-; Total registers                             ; 1603                   ;
-;     -- Dedicated logic registers            ; 1603                   ;
+; Total registers                             ; 1685                   ;
+;     -- Dedicated logic registers            ; 1685                   ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 24                     ;
+; I/O pins                                    ; 18                     ;
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ; Total PLLs                                  ; 1                      ;
 ;     -- PLLs                                 ; 1                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; GAME_TIMER:C3|timerOut ;
 ; Maximum fan-out                             ; 1545                   ;
-; Total fan-out                               ; 26849                  ;
+; Total fan-out                               ; 27338                  ;
 ; Average fan-out                             ; 2.86                   ;
 +---------------------------------------------+------------------------+
 
@@ -235,7 +241,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Library Name ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_LEVEL                                 ; 7746 (0)          ; 1603 (0)     ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |TOP_LEVEL                                                                                                                      ; work         ;
+; |TOP_LEVEL                                 ; 7841 (0)          ; 1685 (0)     ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |TOP_LEVEL                                                                                                                      ; work         ;
 ;    |GAME_CONTROLLER:gameController|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                                                                       ; work         ;
 ;    |GAME_TIMER:C3|                         ; 43 (43)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|GAME_TIMER:C3                                                                                                        ; work         ;
 ;    |PLAYER_CONTROLLER:p1|                  ; 3611 (411)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                                                                                 ; work         ;
@@ -247,7 +253,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_anh:divider|  ; 1611 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
 ;                |alt_u_div_v8f:divider|     ; 1611 (1611)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;    |PLAYER_CONTROLLER:p2|                  ; 3612 (412)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
+;    |PLAYER_CONTROLLER:p2|                  ; 3613 (413)        ; 772 (772)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
 ;       |lpm_divide:Mod0|                    ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0                                                                                 ; work         ;
 ;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_anh:divider|  ; 1589 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
@@ -261,6 +267,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |PLL_altpll_0:altpll_0|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                                                                                ; PLL          ;
 ;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1                                                   ; PLL          ;
 ;       |SYNC:C1|                            ; 479 (479)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ; work         ;
+;    |ps2_keyboard:keyboard|                 ; 94 (52)           ; 82 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|ps2_keyboard:keyboard                                                                                                ; work         ;
+;       |debounce:debounce_ps2_clk|          ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|ps2_keyboard:keyboard|debounce:debounce_ps2_clk                                                                      ; work         ;
+;       |debounce:debounce_ps2_data|         ; 21 (21)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TOP_LEVEL|ps2_keyboard:keyboard|debounce:debounce_ps2_data                                                                     ; work         ;
 +--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -297,12 +306,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1603  ;
-; Number of registers using Synchronous Clear  ; 54    ;
+; Total registers                              ; 1685  ;
+; Number of registers using Synchronous Clear  ; 66    ;
 ; Number of registers using Synchronous Load   ; 60    ;
 ; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 716   ;
+; Number of registers using Clock Enable       ; 736   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -389,28 +398,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p2|player_direction[0]      ; 9       ;
 ; PLAYER_CONTROLLER:p2|player_direction[31]     ; 7       ;
 ; PLAYER_CONTROLLER:p1|player_direction[0]      ; 9       ;
-; PLAYER_CONTROLLER:p1|player_direction[31]     ; 7       ;
+; PLAYER_CONTROLLER:p1|player_direction[31]     ; 8       ;
 ; Total number of inverted registers = 78       ;         ;
 +-----------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][31] ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][30] ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][5]  ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][1][25] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[1]       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[2]       ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|b[0]                          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][1]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][1]  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[0]       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[0]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |TOP_LEVEL|ps2_keyboard:keyboard|count_idle[7]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_LEVEL|ps2_keyboard:keyboard|debounce:debounce_ps2_clk|counter_out[0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TOP_LEVEL|ps2_keyboard:keyboard|debounce:debounce_ps2_data|counter_out[0] ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][3]                   ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][1][29]                  ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][11]                  ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][1][27]                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[1]                        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[1]                        ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 27 LEs               ; 3 LEs                  ; Yes        ; |TOP_LEVEL|VGA:vga1|SYNC:C1|g[0]                                           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_position[0][0][0]                   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_position[0][0][0]                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|player_direction[31]                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|player_direction[0]                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -429,6 +441,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------+------+---------------------------------------------------------------------------------+
 ; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                               ;
 +---------------------------------+-------+------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard ;
++-----------------------+----------+---------------------------------+
+; Parameter Name        ; Value    ; Type                            ;
++-----------------------+----------+---------------------------------+
+; clk_freq              ; 50000000 ; Signed Integer                  ;
+; debounce_counter_size ; 8        ; Signed Integer                  ;
++-----------------------+----------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_clk ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2_keyboard:keyboard|debounce:debounce_ps2_data ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; counter_size   ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------+
@@ -523,6 +566,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2_keyboard:keyboard"                                                                       ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; snake1special ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; snake2special ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "GAME_CONTROLLER:gameController"                                                                        ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -596,9 +649,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 20 16:53:19 2018
+    Info: Processing started: Wed Jun 20 17:23:18 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file ps2_keyboard.vhd
+    Info (12022): Found design unit 1: ps2_keyboard-logic
+    Info (12023): Found entity 1: ps2_keyboard
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: debounce-logic
+    Info (12023): Found entity 1: debounce
 Info (12021): Found 2 design units, including 1 entities, in source file apple_controller.vhd
     Info (12022): Found design unit 1: APPLE_CONTROLLER-main
     Info (12023): Found entity 1: APPLE_CONTROLLER
@@ -630,10 +689,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file game_co
     Info (12022): Found design unit 1: GAME_CONTROLLER-main
     Info (12023): Found entity 1: GAME_CONTROLLER
 Info (12127): Elaborating entity "TOP_LEVEL" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(79): object "score1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(79): object "score2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(80): object "snake1AteSpecial" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(80): object "snake2AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(97): object "special1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(98): object "special2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(100): object "score1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(100): object "score2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(101): object "snake1AteSpecial" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.vhd(101): object "snake2AteSpecial" assigned a value but never read
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "player2" into its bus
 Info (12128): Elaborating entity "GAME_TIMER" for hierarchy "GAME_TIMER:C3"
@@ -752,6 +813,8 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake1Matrix" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "snake2Matrix" into its bus
+Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "ps2_keyboard:keyboard"
+Info (12128): Elaborating entity "debounce" for hierarchy "ps2_keyboard:keyboard|debounce:debounce_ps2_clk"
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PLAYER_CONTROLLER:p2|Mod1"
@@ -782,14 +845,14 @@ Info (12133): Instantiated megafunction "PLAYER_CONTROLLER:p2|lpm_divide:Mod1" w
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9145 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
+Info (21057): Implemented 9276 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 9120 logic cells
+    Info (21061): Implemented 9257 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 607 megabytes
-    Info: Processing ended: Wed Jun 20 16:53:34 2018
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 614 megabytes
+    Info: Processing ended: Wed Jun 20 17:23:33 2018
     Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:14
 
