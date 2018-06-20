@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.display_types.all;
+
+entity TOP_LEVEL IS
+	port (
+		clk : in std_logic;
+		timerOut : out std_logic
+	);
+end entity;
+
+architecture main of TOP_LEVEL is
+
+entity VGA is
+port (
+	clk : in std_logic_vector(1 downto 0);
+	VGA_HS, VGA_VS : out std_logic;
+	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
+	test : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1)
+);
+
+entity PLAYER_CONTROLLER IS
+	port (
+		clk : in std_logic;
+		up, down, left, right : in std_logic;
+		player : in coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
+	);
+end entity;
+
+
+end entity;
+
+begin
+
+process(clk)
+variable timerCounter : integer := 0;
+begin
+	if(clk'EVENT and clk = '1') then
+		if(timerCounter < ANIMATIONTIME - 1) then
+			timerCounter := timerCounter +1;
+			timerOut <= '0';
+		else
+			timerOut <= '1';
+			timerCounter := 0;
+	end if;
+ end if;
+  end process;
+
+end architecture;

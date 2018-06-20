@@ -1,0 +1,34 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity SYNC is
+port(
+	clock : in std_logic;
+	hsync, vsync :out std_logic;
+	r,g,b : out std_logic_vector(3 downto 0)
+);
+end entity.
+
+architecture main of sync is
+
+signal hpos : integer range 0 to 1688 := 0;
+signal vpos : integer range 0 to 1066 := 0;
+
+begin 
+
+process(clk)
+begin
+	if(rising_edge(clk)) then
+		if(hpos < 1688) then
+			hpos<= hpos +1;
+		else
+			hpos<= 0;
+			if(vpos < 1066) then
+				vpos<= vpos + 1;
+			else
+				vpos <= 0;
+			end if;
+		end if;
+	end if;
+end process;

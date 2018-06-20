@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -5.765
+TNS   : -67.500
+
+Type  : Slow 1200mV 85C Model Setup 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -2.059
+TNS   : -226.952
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : 12.567
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 5.168
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 1.637
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -1.000
+TNS   : -256.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 4.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.688
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -5.067
+TNS   : -59.094
+
+Type  : Slow 1200mV 0C Model Setup 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -1.672
+TNS   : -172.102
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 13.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.510
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 5.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 1.482
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -1.000
+TNS   : -256.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 4.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.683
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -3.388
+TNS   : -39.606
+
+Type  : Fast 1200mV 0C Model Setup 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -0.776
+TNS   : -42.901
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 15.888
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.304
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 6.929
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.925
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PLAYER_CONTROLLER:p1|GAME_TIMER:C3|timerOut'
+Slack : -1.000
+TNS   : -256.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga1|C2|altpll_0|sd1|pll7|clk[0]'
+Slack : 4.414
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.444
+TNS   : 0.000
+
+------------------------------------------------------------

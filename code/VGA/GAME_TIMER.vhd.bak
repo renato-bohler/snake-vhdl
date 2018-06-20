@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.display_types.all;
+
+entity GAME_TIMER IS
+	port (
+		clk : in std_logic;
+		timer_out : out std_logic
+	);
+end entity;
+
+architecture main of GAME_TIMER is
+
+begin
+
+end architecture;

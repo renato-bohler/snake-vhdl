@@ -1,0 +1,5 @@
+PLL_Name	VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1|pll7
+PLLJITTER	31
+PLLSPEmax	84
+PLLSPEmin	-53
+

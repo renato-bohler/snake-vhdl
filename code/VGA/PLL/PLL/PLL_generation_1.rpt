@@ -1,0 +1,40 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=C:/altera/13.0sp1/VGA/PLL/PLL/ --output-directory=C:/altera/13.0sp1/VGA/PLL/ --report-file=bsf:C:/altera/13.0sp1/VGA/PLL/PLL/PLL.bsf --system-info=DEVICE_FAMILY="Cyclone III" --system-info=DEVICE=EP3C16F484C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/altera/13.0sp1/VGA/PLL/PLL/PLL.qsys
+Progress: Loading PLL/PLL.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 13.0]
+Progress: Parameterizing module altpll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: PLL.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: PLL.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: PLL.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: PLL.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=C:/altera/13.0sp1/VGA/PLL/PLL/ --output-directory=C:/altera/13.0sp1/VGA/PLL/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:C:/altera/13.0sp1/VGA/PLL/PLL/PLL.sopcinfo --report-file=html:C:/altera/13.0sp1/VGA/PLL/PLL/PLL.html --report-file=qip:C:/altera/13.0sp1/VGA/PLL/synthesis/PLL.qip --report-file=cmp:C:/altera/13.0sp1/VGA/PLL/PLL/PLL.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone III" --system-info=DEVICE=EP3C16F484C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=C:/altera/13.0sp1/VGA/PLL/PLL/PLL.qsys --language=VERILOG
+Progress: Loading PLL/PLL.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 13.0]
+Progress: Parameterizing module altpll_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: PLL.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: PLL.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: PLL.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: PLL.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Info: PLL: Generating PLL "PLL" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 1 modules, 0 connections
+Info: altpll_0: "PLL" instantiated altpll "altpll_0"
+Info: PLL: Done PLL" with 2 modules, 2 files, 11737 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
