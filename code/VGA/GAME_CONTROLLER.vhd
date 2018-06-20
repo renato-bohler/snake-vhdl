@@ -29,27 +29,34 @@ begin
 
 process(gameTick)
 
-	variable score1Var 				: integer := 0;
-	variable score2Var 				: integer := 0;
+	variable snakesCollided			: std_logic := '0';
 
-	variable snake1AteAppleVar 	: std_logic := '0';
-	variable snake2AteAppleVar 	: std_logic := '0';
-
-	variable snake1AteSpecialVar	: std_logic := '0';
-	variable snake2AteSpecialVar	: std_logic := '0';
-
-	variable gameOverVar 			: std_logic	:= '0';
-
-	-- TODO: gameRunning deveria ser controlado pelo gameStart
-	variable gameRunningVar 		: std_logic := '1';
-
+	variable xCabecaCobra1			: integer;
+	variable yCabecaCobra1			: integer;
+	
+	variable xCabecaCobra2			: integer;
+	variable yCabecaCobra2			: integer;
+	
 begin
-
 	if(rising_edge(gameTick)) then
-		gameOverVar := not(gameOverVar);
+		-- Detecção de colisão cobra 1 <=> cobra 2
+		snakesCollided := '0';
+		
+		xCabecaCobra1 := snake1Matrix(0,0);
+		yCabecaCobra1 := snake1Matrix(0,1);
+		
+		xCabecaCobra2 := snake2Matrix(0,0);
+		yCabecaCobra2 := snake2Matrix(0,1);
+		
+		for i in 0 to MAX_ELEMENTS - 1 loop
+			if ((xCabecaCobra1 = snake2Matrix(i,0) and yCabecaCobra1 = snake2Matrix(i,1)) or
+				 (xCabecaCobra2 = snake1Matrix(i,0) and yCabecaCobra2 = snake1Matrix(i,1))) then
+				snakesCollided := '1';
+			end if;
+		end loop;
+		
+		gameOver <= snakesCollided;
 	end if;
-	gameOver <= gameOverVar;
-
 end process;
 
 end architecture;

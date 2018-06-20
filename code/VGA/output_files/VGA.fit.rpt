@@ -1,6 +1,6 @@
 Fitter report for VGA
-Wed Jun 20 16:13:42 2018
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Jun 20 17:09:25 2018
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
 ---------------------
@@ -65,26 +65,26 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Fitter Summary                                                                       ;
-+------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jun 20 16:13:42 2018           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; VGA                                             ;
-; Top-level Entity Name              ; TOP_LEVEL                                       ;
-; Family                             ; Cyclone III                                     ;
-; Device                             ; EP3C16F484C6                                    ;
-; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 8,729 / 15,408 ( 57 % )                         ;
-;     Total combinational functions  ; 7,741 / 15,408 ( 50 % )                         ;
-;     Dedicated logic registers      ; 1,602 / 15,408 ( 10 % )                         ;
-; Total registers                    ; 1602                                            ;
-; Total pins                         ; 24 / 347 ( 7 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Fitter Summary                                                                  ;
++------------------------------------+--------------------------------------------+
+; Fitter Status                      ; Successful - Wed Jun 20 17:09:25 2018      ;
+; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; VGA                                        ;
+; Top-level Entity Name              ; TOP_LEVEL                                  ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C16F484C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 9,032 / 15,408 ( 59 % )                    ;
+;     Total combinational functions  ; 8,209 / 15,408 ( 53 % )                    ;
+;     Dedicated logic registers      ; 1,602 / 15,408 ( 10 % )                    ;
+; Total registers                    ; 1602                                       ;
+; Total pins                         ; 24 / 347 ( 7 % )                           ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
++------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -153,7 +153,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -187,8 +187,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 9398 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 9398 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 9866 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 9866 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -211,7 +211,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 9394    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 9862    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 4       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -219,7 +219,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/output_files/VGA.pin.
+The pin-out file can be found in C:/Users/DAELN/snake-vhdl/code/VGA/output_files/VGA.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -227,26 +227,26 @@ The pin-out file can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/outp
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 8,729 / 15,408 ( 57 % ) ;
-;     -- Combinational with no register       ; 7127                    ;
-;     -- Register only                        ; 988                     ;
-;     -- Combinational with a register        ; 614                     ;
+; Total logic elements                        ; 9,032 / 15,408 ( 59 % ) ;
+;     -- Combinational with no register       ; 7430                    ;
+;     -- Register only                        ; 823                     ;
+;     -- Combinational with a register        ; 779                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 2553                    ;
-;     -- 3 input functions                    ; 2349                    ;
-;     -- <=2 input functions                  ; 2839                    ;
-;     -- Register only                        ; 988                     ;
+;     -- 4 input functions                    ; 3050                    ;
+;     -- 3 input functions                    ; 2353                    ;
+;     -- <=2 input functions                  ; 2806                    ;
+;     -- Register only                        ; 823                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 5018                    ;
+;     -- normal mode                          ; 5486                    ;
 ;     -- arithmetic mode                      ; 2723                    ;
 ;                                             ;                         ;
 ; Total registers*                            ; 1,602 / 17,068 ( 9 % )  ;
 ;     -- Dedicated logic registers            ; 1,602 / 15,408 ( 10 % ) ;
 ;     -- I/O registers                        ; 0 / 1,660 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 660 / 963 ( 69 % )      ;
+; Total LABs:  partially or completely used   ; 675 / 963 ( 70 % )      ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 24 / 347 ( 7 % )        ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )          ;
@@ -263,12 +263,12 @@ The pin-out file can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/outp
 ; CRC blocks                                  ; 0 / 1 ( 0 % )           ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 22% / 19% / 25%         ;
-; Peak interconnect usage (total/H/V)         ; 36% / 31% / 44%         ;
+; Average interconnect usage (total/H/V)      ; 26% / 25% / 28%         ;
+; Peak interconnect usage (total/H/V)         ; 47% / 41% / 55%         ;
 ; Maximum fan-out                             ; 1545                    ;
 ; Highest non-global fan-out                  ; 320                     ;
-; Total fan-out                               ; 27448                   ;
-; Average fan-out                             ; 2.73                    ;
+; Total fan-out                               ; 29276                   ;
+; Average fan-out                             ; 2.81                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -281,25 +281,25 @@ The pin-out file can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/outp
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 8729 / 15408 ( 57 % ) ; 0 / 15408 ( 0 % )              ;
-;     -- Combinational with no register       ; 7127                  ; 0                              ;
-;     -- Register only                        ; 988                   ; 0                              ;
-;     -- Combinational with a register        ; 614                   ; 0                              ;
+; Total logic elements                        ; 9032 / 15408 ( 59 % ) ; 0 / 15408 ( 0 % )              ;
+;     -- Combinational with no register       ; 7430                  ; 0                              ;
+;     -- Register only                        ; 823                   ; 0                              ;
+;     -- Combinational with a register        ; 779                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 2553                  ; 0                              ;
-;     -- 3 input functions                    ; 2349                  ; 0                              ;
-;     -- <=2 input functions                  ; 2839                  ; 0                              ;
-;     -- Register only                        ; 988                   ; 0                              ;
+;     -- 4 input functions                    ; 3050                  ; 0                              ;
+;     -- 3 input functions                    ; 2353                  ; 0                              ;
+;     -- <=2 input functions                  ; 2806                  ; 0                              ;
+;     -- Register only                        ; 823                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 5018                  ; 0                              ;
+;     -- normal mode                          ; 5486                  ; 0                              ;
 ;     -- arithmetic mode                      ; 2723                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 1602                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 1602 / 15408 ( 10 % ) ; 0 / 15408 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 660 / 963 ( 69 % )    ; 0 / 963 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 675 / 963 ( 70 % )    ; 0 / 963 ( 0 % )                ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 24                    ; 0                              ;
@@ -316,8 +316,8 @@ The pin-out file can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/outp
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 27445                 ; 28                             ;
-;     -- Registered Connections               ; 2894                  ; 0                              ;
+;     -- Total Connections                    ; 29273                 ; 28                             ;
+;     -- Registered Connections               ; 4328                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 25                             ;
@@ -969,32 +969,32 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                 ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                             ; Library Name ;
 +--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TOP_LEVEL                                 ; 8729 (0)    ; 1602 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 7127 (0)     ; 988 (0)           ; 614 (0)          ; |TOP_LEVEL                                                                                                                      ; work         ;
-;    |GAME_CONTROLLER:gameController|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                                                                       ; work         ;
-;    |GAME_TIMER:C3|                         ; 44 (44)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 1 (1)             ; 32 (32)          ; |TOP_LEVEL|GAME_TIMER:C3                                                                                                        ; work         ;
-;    |PLAYER_CONTROLLER:p1|                  ; 4267 (1084) ; 772 (772)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3494 (322)   ; 497 (497)         ; 276 (248)        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                                                                                 ; work         ;
-;       |lpm_divide:Mod0|                    ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1579 (0)     ; 0 (0)             ; 10 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0                                                                                 ; work         ;
-;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1579 (0)     ; 0 (0)             ; 10 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_anh:divider|  ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1579 (0)     ; 0 (0)             ; 10 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
-;                |alt_u_div_v8f:divider|     ; 1589 (1589) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1579 (1579)  ; 0 (0)             ; 10 (10)          ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;       |lpm_divide:Mod1|                    ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1593 (0)     ; 0 (0)             ; 18 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1                                                                                 ; work         ;
-;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1593 (0)     ; 0 (0)             ; 18 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_anh:divider|  ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1593 (0)     ; 0 (0)             ; 18 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
-;                |alt_u_div_v8f:divider|     ; 1611 (1611) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1593 (1593)  ; 0 (0)             ; 18 (18)          ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;    |PLAYER_CONTROLLER:p2|                  ; 4273 (1094) ; 772 (772)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3490 (322)   ; 490 (490)         ; 293 (261)        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ; work         ;
-;       |lpm_divide:Mod0|                    ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1580 (0)     ; 0 (0)             ; 9 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0                                                                                 ; work         ;
-;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1580 (0)     ; 0 (0)             ; 9 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_anh:divider|  ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1580 (0)     ; 0 (0)             ; 9 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
-;                |alt_u_div_v8f:divider|     ; 1589 (1589) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1580 (1580)  ; 0 (0)             ; 9 (9)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;       |lpm_divide:Mod1|                    ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1588 (0)     ; 0 (0)             ; 23 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1                                                                                 ; work         ;
-;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1588 (0)     ; 0 (0)             ; 23 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_anh:divider|  ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1588 (0)     ; 0 (0)             ; 23 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ; work         ;
-;                |alt_u_div_v8f:divider|     ; 1611 (1611) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1588 (1588)  ; 0 (0)             ; 23 (23)          ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ; work         ;
-;    |VGA:vga1|                              ; 475 (0)     ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (0)      ; 0 (0)             ; 343 (0)          ; |TOP_LEVEL|VGA:vga1                                                                                                             ; work         ;
-;       |PLL:C2|                             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2                                                                                                      ; PLL          ;
-;          |PLL_altpll_0:altpll_0|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                                                                                ; PLL          ;
-;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1                                                   ; PLL          ;
-;       |SYNC:C1|                            ; 475 (475)   ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (132)    ; 0 (0)             ; 343 (343)        ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ; work         ;
+; |TOP_LEVEL                                 ; 9032 (0)    ; 1602 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 24   ; 0            ; 7430 (0)     ; 823 (0)           ; 779 (0)          ; |TOP_LEVEL                                                                                                                      ;              ;
+;    |GAME_CONTROLLER:gameController|        ; 469 (469)   ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 252 (252)    ; 0 (0)             ; 217 (217)        ; |TOP_LEVEL|GAME_CONTROLLER:gameController                                                                                       ;              ;
+;    |GAME_TIMER:C3|                         ; 44 (44)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 1 (1)             ; 32 (32)          ; |TOP_LEVEL|GAME_TIMER:C3                                                                                                        ;              ;
+;    |PLAYER_CONTROLLER:p1|                  ; 4227 (1061) ; 772 (772)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3413 (302)   ; 393 (393)         ; 421 (332)        ; |TOP_LEVEL|PLAYER_CONTROLLER:p1                                                                                                 ;              ;
+;       |lpm_divide:Mod0|                    ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1501 (0)     ; 0 (0)             ; 88 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1501 (0)     ; 0 (0)             ; 88 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_anh:divider|  ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1501 (0)     ; 0 (0)             ; 88 (0)           ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ;              ;
+;                |alt_u_div_v8f:divider|     ; 1589 (1589) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1501 (1501)  ; 0 (0)             ; 88 (88)          ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ;              ;
+;       |lpm_divide:Mod1|                    ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1610 (0)     ; 0 (0)             ; 1 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1                                                                                 ;              ;
+;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1610 (0)     ; 0 (0)             ; 1 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_anh:divider|  ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1610 (0)     ; 0 (0)             ; 1 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ;              ;
+;                |alt_u_div_v8f:divider|     ; 1611 (1611) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1610 (1610)  ; 0 (0)             ; 1 (1)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ;              ;
+;    |PLAYER_CONTROLLER:p2|                  ; 4295 (1096) ; 772 (772)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3513 (318)   ; 429 (429)         ; 353 (348)        ; |TOP_LEVEL|PLAYER_CONTROLLER:p2                                                                                                 ;              ;
+;       |lpm_divide:Mod0|                    ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1584 (0)     ; 0 (0)             ; 5 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_cbm:auto_generated|   ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1584 (0)     ; 0 (0)             ; 5 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_anh:divider|  ; 1589 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1584 (0)     ; 0 (0)             ; 5 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ;              ;
+;                |alt_u_div_v8f:divider|     ; 1589 (1589) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1584 (1584)  ; 0 (0)             ; 5 (5)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ;              ;
+;       |lpm_divide:Mod1|                    ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1611 (0)     ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1                                                                                 ;              ;
+;          |lpm_divide_cbm:auto_generated|   ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1611 (0)     ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_anh:divider|  ; 1611 (0)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1611 (0)     ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider                       ;              ;
+;                |alt_u_div_v8f:divider|     ; 1611 (1611) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1611 (1611)  ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider ;              ;
+;    |VGA:vga1|                              ; 474 (0)     ; 24 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 241 (0)      ; 0 (0)             ; 233 (0)          ; |TOP_LEVEL|VGA:vga1                                                                                                             ;              ;
+;       |PLL:C2|                             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2                                                                                                      ;              ;
+;          |PLL_altpll_0:altpll_0|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0                                                                                ;              ;
+;             |PLL_altpll_0_altpll_h542:sd1| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |TOP_LEVEL|VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1                                                   ;              ;
+;       |SYNC:C1|                            ; 474 (474)   ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 241 (241)    ; 0 (0)             ; 233 (233)        ; |TOP_LEVEL|VGA:vga1|SYNC:C1                                                                                                     ;              ;
 +--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1021,12 +1021,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_out  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; clk      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; down2    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; up2      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; right2   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; up2      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; right2   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; left2    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; left1    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; down1    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; up1      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; down1    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; up1      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; right1   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1041,19 +1041,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - PLAYER_CONTROLLER:p2|player_direction[0]~0 ; 0                 ; 6       ;
 ;      - PLAYER_CONTROLLER:p2|player_direction~3    ; 0                 ; 6       ;
 ; up2                                               ;                   ;         ;
-;      - PLAYER_CONTROLLER:p2|player_direction[0]~0 ; 0                 ; 6       ;
+;      - PLAYER_CONTROLLER:p2|player_direction[0]~0 ; 1                 ; 6       ;
 ; right2                                            ;                   ;         ;
-;      - PLAYER_CONTROLLER:p2|process_0~0           ; 1                 ; 6       ;
-;      - PLAYER_CONTROLLER:p2|player_direction[0]~4 ; 1                 ; 6       ;
+;      - PLAYER_CONTROLLER:p2|process_0~0           ; 0                 ; 6       ;
+;      - PLAYER_CONTROLLER:p2|player_direction[0]~4 ; 0                 ; 6       ;
 ; left2                                             ;                   ;         ;
 ;      - PLAYER_CONTROLLER:p2|process_0~1           ; 0                 ; 6       ;
 ; left1                                             ;                   ;         ;
 ;      - PLAYER_CONTROLLER:p1|process_0~0           ; 0                 ; 6       ;
 ; down1                                             ;                   ;         ;
-;      - PLAYER_CONTROLLER:p1|player_direction[0]~0 ; 0                 ; 6       ;
-;      - PLAYER_CONTROLLER:p1|player_direction~3    ; 0                 ; 6       ;
+;      - PLAYER_CONTROLLER:p1|player_direction[0]~0 ; 1                 ; 6       ;
+;      - PLAYER_CONTROLLER:p1|player_direction~3    ; 1                 ; 6       ;
 ; up1                                               ;                   ;         ;
-;      - PLAYER_CONTROLLER:p1|player_direction[0]~0 ; 0                 ; 6       ;
+;      - PLAYER_CONTROLLER:p1|player_direction[0]~0 ; 1                 ; 6       ;
 ; right1                                            ;                   ;         ;
 ;      - PLAYER_CONTROLLER:p1|process_0~1           ; 1                 ; 6       ;
 ;      - PLAYER_CONTROLLER:p1|player_direction[0]~4 ; 1                 ; 6       ;
@@ -1065,19 +1065,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; GAME_TIMER:C3|LessThan0~10                                                          ; LCCOMB_X11_Y1_N16  ; 33      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; GAME_TIMER:C3|timerOut                                                              ; FF_X20_Y2_N27      ; 1545    ; Clock                     ; yes    ; Global Clock         ; GCLK17           ; --                        ;
-; PLAYER_CONTROLLER:p1|Equal2~0                                                       ; LCCOMB_X3_Y11_N6   ; 35      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; PLAYER_CONTROLLER:p1|player_position~0                                              ; LCCOMB_X3_Y11_N24  ; 320     ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; PLAYER_CONTROLLER:p1|player_position~3                                              ; LCCOMB_X3_Y11_N8   ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; PLAYER_CONTROLLER:p2|Equal2~0                                                       ; LCCOMB_X7_Y14_N28  ; 35      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; PLAYER_CONTROLLER:p2|player_position~2                                              ; LCCOMB_X7_Y14_N14  ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; PLAYER_CONTROLLER:p2|player_position~5                                              ; LCCOMB_X7_Y14_N16  ; 320     ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; GAME_TIMER:C3|LessThan0~10                                                          ; LCCOMB_X22_Y5_N2   ; 33      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; GAME_TIMER:C3|timerOut                                                              ; FF_X22_Y1_N25      ; 1545    ; Clock                     ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; PLAYER_CONTROLLER:p1|Equal2~0                                                       ; LCCOMB_X26_Y24_N14 ; 35      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; PLAYER_CONTROLLER:p1|player_position~0                                              ; LCCOMB_X26_Y24_N28 ; 320     ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; PLAYER_CONTROLLER:p1|player_position~3                                              ; LCCOMB_X26_Y24_N4  ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; PLAYER_CONTROLLER:p2|Equal2~0                                                       ; LCCOMB_X24_Y18_N30 ; 35      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; PLAYER_CONTROLLER:p2|player_position~2                                              ; LCCOMB_X24_Y18_N8  ; 33      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; PLAYER_CONTROLLER:p2|player_position~5                                              ; LCCOMB_X24_Y18_N22 ; 320     ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 ; VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1|wire_pll7_clk[0] ; PLL_2              ; 24      ; Clock                     ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; VGA:vga1|SYNC:C1|LessThan0~1                                                        ; LCCOMB_X21_Y12_N0  ; 22      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; VGA:vga1|SYNC:C1|LessThan1~1                                                        ; LCCOMB_X14_Y16_N0  ; 11      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; VGA:vga1|SYNC:C1|b[0]~387                                                           ; LCCOMB_X20_Y16_N4  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; VGA:vga1|SYNC:C1|process_0~15                                                       ; LCCOMB_X20_Y12_N20 ; 2       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; VGA:vga1|SYNC:C1|LessThan0~1                                                        ; LCCOMB_X17_Y16_N26 ; 22      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; VGA:vga1|SYNC:C1|LessThan1~1                                                        ; LCCOMB_X10_Y13_N26 ; 11      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; VGA:vga1|SYNC:C1|g[0]~386                                                           ; LCCOMB_X17_Y12_N28 ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; VGA:vga1|SYNC:C1|process_0~15                                                       ; LCCOMB_X20_Y16_N30 ; 2       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                 ; PIN_G21            ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
 ; clk                                                                                 ; PIN_G21            ; 33      ; Clock                     ; yes    ; Global Clock         ; GCLK9            ; --                        ;
 +-------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
@@ -1088,7 +1088,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                                ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; GAME_TIMER:C3|timerOut                                                              ; FF_X20_Y2_N27 ; 1545    ; 411                                  ; Global Clock         ; GCLK17           ; --                        ;
+; GAME_TIMER:C3|timerOut                                                              ; FF_X22_Y1_N25 ; 1545    ; 331                                  ; Global Clock         ; GCLK19           ; --                        ;
 ; VGA:vga1|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_h542:sd1|wire_pll7_clk[0] ; PLL_2         ; 24      ; 2                                    ; Global Clock         ; GCLK8            ; --                        ;
 ; clk                                                                                 ; PIN_G21       ; 33      ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
 +-------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
@@ -1191,10 +1191,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_2~24             ; 36      ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_2~24             ; 36      ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_2~24             ; 36      ;
+; PLAYER_CONTROLLER:p1|player_position[0][0][31]                                                                                           ; 36      ;
 ; PLAYER_CONTROLLER:p1|Equal2~0                                                                                                            ; 35      ;
 ; PLAYER_CONTROLLER:p2|Equal2~0                                                                                                            ; 35      ;
 ; PLAYER_CONTROLLER:p1|player_position~3                                                                                                   ; 33      ;
 ; PLAYER_CONTROLLER:p1|Equal1~0                                                                                                            ; 33      ;
+; PLAYER_CONTROLLER:p2|Equal3~0                                                                                                            ; 33      ;
 ; PLAYER_CONTROLLER:p2|player_position~2                                                                                                   ; 33      ;
 ; PLAYER_CONTROLLER:p2|Equal1~0                                                                                                            ; 33      ;
 ; GAME_TIMER:C3|LessThan0~10                                                                                                               ; 33      ;
@@ -1204,13 +1206,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_1~22             ; 33      ;
 ; PLAYER_CONTROLLER:p1|Equal3~0                                                                                                            ; 32      ;
 ; PLAYER_CONTROLLER:p1|LessThan1~10                                                                                                        ; 32      ;
-; PLAYER_CONTROLLER:p1|LessThan0~10                                                                                                        ; 32      ;
 ; PLAYER_CONTROLLER:p2|LessThan0~10                                                                                                        ; 32      ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_25~66            ; 32      ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_25~66            ; 32      ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_25~66            ; 32      ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_25~66            ; 32      ;
-; PLAYER_CONTROLLER:p2|Equal3~0                                                                                                            ; 31      ;
+; PLAYER_CONTROLLER:p1|LessThan0~9                                                                                                         ; 31      ;
+; PLAYER_CONTROLLER:p1|LessThan0~4                                                                                                         ; 31      ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_31~20            ; 30      ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_31~20            ; 30      ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|op_31~20            ; 30      ;
@@ -1244,8 +1246,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA:vga1|SYNC:C1|Add1~2                                                                                                                  ; 12      ;
 ; VGA:vga1|SYNC:C1|Add1~0                                                                                                                  ; 12      ;
 ; VGA:vga1|SYNC:C1|LessThan1~1                                                                                                             ; 11      ;
-; PLAYER_CONTROLLER:p2|player_direction[0]                                                                                                 ; 10      ;
 ; PLAYER_CONTROLLER:p1|player_direction[0]                                                                                                 ; 9       ;
+; PLAYER_CONTROLLER:p2|player_direction[0]                                                                                                 ; 9       ;
 ; VGA:vga1|SYNC:C1|b[0]                                                                                                                    ; 8       ;
 ; PLAYER_CONTROLLER:p1|player_direction[31]                                                                                                ; 7       ;
 ; PLAYER_CONTROLLER:p1|player_direction[1]                                                                                                 ; 7       ;
@@ -1257,13 +1259,140 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|player_position[0][0][0]                                                                                            ; 7       ;
 ; PLAYER_CONTROLLER:p2|player_position[0][1][0]                                                                                            ; 7       ;
 ; PLAYER_CONTROLLER:p2|player_position[0][0][0]                                                                                            ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][30]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][29]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][31]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][28]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][27]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][26]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][25]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][24]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][23]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][22]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][21]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][20]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][19]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][18]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][17]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][16]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][15]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][14]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][13]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][12]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][11]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][10]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][9]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][8]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][7]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][6]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][5]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][4]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][3]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][2]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][1]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][1][0]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][30]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][29]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][31]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][28]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][27]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][26]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][25]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][24]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][23]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][22]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][21]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][20]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][19]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][18]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][17]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][16]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][15]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][14]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][13]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][12]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][11]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][10]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][9]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][8]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][7]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][6]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][5]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][4]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][3]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][2]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][1]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p1|player[0][0][0]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][30]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][29]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][31]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][28]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][27]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][26]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][25]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][24]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][23]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][22]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][21]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][20]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][19]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][18]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][17]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][16]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][15]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][14]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][13]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][12]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][11]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][10]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][9]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][8]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][7]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][6]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][5]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][4]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][3]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][2]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][1]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][1][0]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][30]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][29]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][31]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][28]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][27]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][26]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][25]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][24]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][23]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][22]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][21]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][20]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][19]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][18]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][17]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][16]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][15]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][14]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][13]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][12]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][11]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][10]                                                                                                    ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][9]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][8]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][7]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][6]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][5]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][4]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][3]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][2]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][1]                                                                                                     ; 7       ;
+; PLAYER_CONTROLLER:p2|player[0][0][0]                                                                                                     ; 7       ;
 ; PLAYER_CONTROLLER:p2|LessThan1~10                                                                                                        ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][1]                                                                                            ; 6       ;
 ; PLAYER_CONTROLLER:p2|player_position[0][1][31]                                                                                           ; 6       ;
 ; PLAYER_CONTROLLER:p2|player_position[0][0][1]                                                                                            ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][30]                                                                                           ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][29]                                                                                           ; 6       ;
-; PLAYER_CONTROLLER:p1|player_position[0][0][31]                                                                                           ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][28]                                                                                           ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][27]                                                                                           ; 6       ;
 ; PLAYER_CONTROLLER:p1|player_position[0][0][26]                                                                                           ; 6       ;
@@ -1397,7 +1526,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|player_direction[0]~0                                                                                               ; 4       ;
 ; PLAYER_CONTROLLER:p2|process_0~0                                                                                                         ; 4       ;
 ; PLAYER_CONTROLLER:p2|player_direction[0]~0                                                                                               ; 4       ;
-; PLAYER_CONTROLLER:p2|player[2][1][16]                                                                                                    ; 4       ;
 ; VGA:vga1|SYNC:C1|g[0]                                                                                                                    ; 4       ;
 ; VGA:vga1|SYNC:C1|vpos[4]                                                                                                                 ; 4       ;
 ; VGA:vga1|SYNC:C1|vpos[3]                                                                                                                 ; 4       ;
@@ -1408,6 +1536,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA:vga1|SYNC:C1|hpos[1]                                                                                                                 ; 4       ;
 ; VGA:vga1|SYNC:C1|hpos[0]                                                                                                                 ; 4       ;
 ; VGA:vga1|SYNC:C1|hpos[3]                                                                                                                 ; 4       ;
+; PLAYER_CONTROLLER:p2|player[2][1][16]                                                                                                    ; 3       ;
+; PLAYER_CONTROLLER:p2|player[2][1][15]                                                                                                    ; 3       ;
+; PLAYER_CONTROLLER:p2|player[2][1][14]                                                                                                    ; 3       ;
 ; VGA:vga1|SYNC:C1|process_0~10                                                                                                            ; 3       ;
 ; VGA:vga1|SYNC:C1|process_0~6                                                                                                             ; 3       ;
 ; PLAYER_CONTROLLER:p1|Add5~62                                                                                                             ; 3       ;
@@ -1571,8 +1702,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[269]~2118  ; 2       ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[270]~2117  ; 2       ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[271]~2116  ; 2       ;
-; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[236]~1949  ; 2       ;
-; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[237]~1948  ; 2       ;
+; PLAYER_CONTROLLER:p2|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[237]~1941  ; 2       ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1024]~2145 ; 2       ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[991]~2144  ; 2       ;
 ; PLAYER_CONTROLLER:p2|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[958]~2143  ; 2       ;
@@ -1969,136 +2099,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[501]~1576  ; 2       ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[502]~1575  ; 2       ;
 ; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[503]~1574  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[504]~1573  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[505]~1572  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[506]~1571  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[507]~1570  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[508]~1569  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[509]~1568  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[510]~1567  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[464]~1566  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[465]~1565  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[466]~1564  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[467]~1563  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[468]~1562  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[469]~1561  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[470]~1560  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[471]~1559  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[472]~1558  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[473]~1557  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[474]~1556  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[475]~1555  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[476]~1554  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[431]~1553  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[432]~1552  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[433]~1551  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[434]~1550  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[435]~1549  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[436]~1548  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[437]~1547  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[438]~1546  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[439]~1545  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[440]~1544  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[441]~1543  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[442]~1542  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[398]~1541  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[399]~1540  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[400]~1539  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[401]~1538  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[402]~1537  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[403]~1536  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[404]~1535  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[405]~1534  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[406]~1533  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[407]~1532  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[408]~1531  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[365]~1530  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[366]~1529  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[367]~1528  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[368]~1527  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[369]~1526  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[370]~1525  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[371]~1524  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[372]~1523  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[373]~1522  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[374]~1521  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[332]~1520  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[333]~1519  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[334]~1518  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[335]~1517  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[336]~1516  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[337]~1515  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[338]~1514  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[339]~1513  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[340]~1512  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[299]~1511  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[300]~1510  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[301]~1509  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[302]~1508  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[303]~1507  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[304]~1506  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[305]~1505  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[306]~1504  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[266]~1503  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[267]~1502  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[268]~1501  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[269]~1500  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[270]~1499  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[271]~1498  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[272]~1497  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod1|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[238]~1496  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1025]~2115 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1026]~2114 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1027]~2113 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1028]~2112 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1029]~2111 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1030]~2110 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1031]~2109 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1032]~2108 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1033]~2107 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1034]~2106 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1035]~2105 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1036]~2104 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1037]~2103 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1038]~2102 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1039]~2101 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1040]~2100 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1041]~2099 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1042]~2098 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1043]~2097 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1044]~2096 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1045]~2095 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1046]~2094 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1047]~2093 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1048]~2092 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1049]~2091 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1050]~2090 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1051]~2089 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1052]~2088 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1053]~2087 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[992]~2085  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[993]~2084  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[994]~2083  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[995]~2082  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[996]~2081  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[997]~2080  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[998]~2079  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[999]~2078  ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1000]~2077 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1001]~2076 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1002]~2075 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1003]~2074 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1004]~2073 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1005]~2072 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1006]~2071 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1007]~2070 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1008]~2069 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1009]~2068 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1010]~2067 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1011]~2066 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1012]~2065 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1013]~2064 ; 2       ;
-; PLAYER_CONTROLLER:p1|lpm_divide:Mod0|lpm_divide_cbm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_v8f:divider|StageOut[1014]~2063 ; 2       ;
 +------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2107,52 +2107,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+--------------------------+
 ; Other Routing Resource Type ; Usage                    ;
 +-----------------------------+--------------------------+
-; Block interconnects         ; 13,576 / 47,787 ( 28 % ) ;
-; C16 interconnects           ; 194 / 1,804 ( 11 % )     ;
-; C4 interconnects            ; 7,793 / 31,272 ( 25 % )  ;
-; Direct links                ; 2,010 / 47,787 ( 4 % )   ;
+; Block interconnects         ; 14,966 / 47,787 ( 31 % ) ;
+; C16 interconnects           ; 173 / 1,804 ( 10 % )     ;
+; C4 interconnects            ; 8,854 / 31,272 ( 28 % )  ;
+; Direct links                ; 2,242 / 47,787 ( 5 % )   ;
 ; Global clocks               ; 3 / 20 ( 15 % )          ;
-; Local interconnects         ; 3,312 / 15,408 ( 21 % )  ;
-; R24 interconnects           ; 110 / 1,775 ( 6 % )      ;
-; R4 interconnects            ; 8,394 / 41,310 ( 20 % )  ;
+; Local interconnects         ; 3,437 / 15,408 ( 22 % )  ;
+; R24 interconnects           ; 194 / 1,775 ( 11 % )     ;
+; R4 interconnects            ; 10,357 / 41,310 ( 25 % ) ;
 +-----------------------------+--------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 13.23) ; Number of LABs  (Total = 660) ;
+; Number of Logic Elements  (Average = 13.38) ; Number of LABs  (Total = 675) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 23                            ;
-; 2                                           ; 11                            ;
-; 3                                           ; 18                            ;
+; 1                                           ; 17                            ;
+; 2                                           ; 14                            ;
+; 3                                           ; 17                            ;
 ; 4                                           ; 12                            ;
-; 5                                           ; 15                            ;
+; 5                                           ; 8                             ;
 ; 6                                           ; 10                            ;
-; 7                                           ; 14                            ;
-; 8                                           ; 11                            ;
-; 9                                           ; 9                             ;
+; 7                                           ; 9                             ;
+; 8                                           ; 16                            ;
+; 9                                           ; 22                            ;
 ; 10                                          ; 16                            ;
-; 11                                          ; 15                            ;
-; 12                                          ; 16                            ;
-; 13                                          ; 27                            ;
-; 14                                          ; 23                            ;
-; 15                                          ; 50                            ;
-; 16                                          ; 390                           ;
+; 11                                          ; 19                            ;
+; 12                                          ; 20                            ;
+; 13                                          ; 18                            ;
+; 14                                          ; 18                            ;
+; 15                                          ; 40                            ;
+; 16                                          ; 419                           ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 0.52) ; Number of LABs  (Total = 660) ;
+; LAB-wide Signals  (Average = 0.58) ; Number of LABs  (Total = 675) ;
 +------------------------------------+-------------------------------+
 ; 1 Async. clear                     ; 1                             ;
-; 1 Clock                            ; 179                           ;
-; 1 Clock enable                     ; 134                           ;
-; 1 Sync. clear                      ; 2                             ;
-; 1 Sync. load                       ; 18                            ;
-; 2 Clock enables                    ; 5                             ;
+; 1 Clock                            ; 213                           ;
+; 1 Clock enable                     ; 146                           ;
+; 1 Sync. clear                      ; 4                             ;
+; 1 Sync. load                       ; 15                            ;
+; 2 Clock enables                    ; 11                            ;
 ; 2 Clocks                           ; 1                             ;
 +------------------------------------+-------------------------------+
 
@@ -2160,116 +2160,120 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 15.13) ; Number of LABs  (Total = 660) ;
+; Number of Signals Sourced  (Average = 15.33) ; Number of LABs  (Total = 675) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 17                            ;
-; 2                                            ; 13                            ;
-; 3                                            ; 19                            ;
-; 4                                            ; 11                            ;
-; 5                                            ; 9                             ;
-; 6                                            ; 9                             ;
-; 7                                            ; 11                            ;
-; 8                                            ; 12                            ;
-; 9                                            ; 10                            ;
+; 1                                            ; 16                            ;
+; 2                                            ; 12                            ;
+; 3                                            ; 9                             ;
+; 4                                            ; 12                            ;
+; 5                                            ; 11                            ;
+; 6                                            ; 10                            ;
+; 7                                            ; 10                            ;
+; 8                                            ; 13                            ;
+; 9                                            ; 17                            ;
 ; 10                                           ; 15                            ;
-; 11                                           ; 10                            ;
-; 12                                           ; 12                            ;
-; 13                                           ; 24                            ;
-; 14                                           ; 16                            ;
-; 15                                           ; 38                            ;
-; 16                                           ; 302                           ;
-; 17                                           ; 15                            ;
+; 11                                           ; 14                            ;
+; 12                                           ; 22                            ;
+; 13                                           ; 18                            ;
+; 14                                           ; 11                            ;
+; 15                                           ; 41                            ;
+; 16                                           ; 289                           ;
+; 17                                           ; 17                            ;
 ; 18                                           ; 12                            ;
-; 19                                           ; 8                             ;
+; 19                                           ; 13                            ;
 ; 20                                           ; 6                             ;
-; 21                                           ; 3                             ;
-; 22                                           ; 3                             ;
-; 23                                           ; 6                             ;
-; 24                                           ; 10                            ;
-; 25                                           ; 9                             ;
-; 26                                           ; 16                            ;
-; 27                                           ; 16                            ;
-; 28                                           ; 11                            ;
-; 29                                           ; 9                             ;
+; 21                                           ; 12                            ;
+; 22                                           ; 7                             ;
+; 23                                           ; 8                             ;
+; 24                                           ; 11                            ;
+; 25                                           ; 13                            ;
+; 26                                           ; 18                            ;
+; 27                                           ; 17                            ;
+; 28                                           ; 7                             ;
+; 29                                           ; 5                             ;
 ; 30                                           ; 3                             ;
-; 31                                           ; 2                             ;
-; 32                                           ; 3                             ;
+; 31                                           ; 4                             ;
+; 32                                           ; 2                             ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 11.40) ; Number of LABs  (Total = 660) ;
+; Number of Signals Sourced Out  (Average = 12.33) ; Number of LABs  (Total = 675) ;
 +--------------------------------------------------+-------------------------------+
 ; 0                                                ; 0                             ;
-; 1                                                ; 36                            ;
-; 2                                                ; 17                            ;
-; 3                                                ; 30                            ;
-; 4                                                ; 28                            ;
-; 5                                                ; 16                            ;
-; 6                                                ; 20                            ;
-; 7                                                ; 16                            ;
-; 8                                                ; 30                            ;
-; 9                                                ; 20                            ;
-; 10                                               ; 26                            ;
-; 11                                               ; 24                            ;
-; 12                                               ; 21                            ;
-; 13                                               ; 42                            ;
-; 14                                               ; 47                            ;
-; 15                                               ; 82                            ;
-; 16                                               ; 189                           ;
-; 17                                               ; 9                             ;
-; 18                                               ; 5                             ;
-; 19                                               ; 0                             ;
-; 20                                               ; 1                             ;
-; 21                                               ; 0                             ;
-; 22                                               ; 0                             ;
+; 1                                                ; 20                            ;
+; 2                                                ; 16                            ;
+; 3                                                ; 16                            ;
+; 4                                                ; 14                            ;
+; 5                                                ; 19                            ;
+; 6                                                ; 12                            ;
+; 7                                                ; 13                            ;
+; 8                                                ; 29                            ;
+; 9                                                ; 32                            ;
+; 10                                               ; 27                            ;
+; 11                                               ; 27                            ;
+; 12                                               ; 35                            ;
+; 13                                               ; 49                            ;
+; 14                                               ; 56                            ;
+; 15                                               ; 86                            ;
+; 16                                               ; 187                           ;
+; 17                                               ; 14                            ;
+; 18                                               ; 11                            ;
+; 19                                               ; 5                             ;
+; 20                                               ; 0                             ;
+; 21                                               ; 1                             ;
+; 22                                               ; 1                             ;
 ; 23                                               ; 1                             ;
+; 24                                               ; 1                             ;
+; 25                                               ; 1                             ;
+; 26                                               ; 1                             ;
+; 27                                               ; 0                             ;
+; 28                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 19.71) ; Number of LABs  (Total = 660) ;
+; Number of Distinct Inputs  (Average = 21.07) ; Number of LABs  (Total = 675) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 1                             ;
-; 2                                            ; 14                            ;
-; 3                                            ; 12                            ;
-; 4                                            ; 16                            ;
-; 5                                            ; 12                            ;
-; 6                                            ; 15                            ;
-; 7                                            ; 18                            ;
-; 8                                            ; 22                            ;
-; 9                                            ; 17                            ;
-; 10                                           ; 14                            ;
-; 11                                           ; 7                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 9                             ;
-; 14                                           ; 11                            ;
-; 15                                           ; 17                            ;
-; 16                                           ; 22                            ;
-; 17                                           ; 31                            ;
-; 18                                           ; 26                            ;
-; 19                                           ; 21                            ;
-; 20                                           ; 22                            ;
-; 21                                           ; 25                            ;
-; 22                                           ; 29                            ;
-; 23                                           ; 38                            ;
-; 24                                           ; 32                            ;
-; 25                                           ; 25                            ;
-; 26                                           ; 25                            ;
+; 1                                            ; 0                             ;
+; 2                                            ; 10                            ;
+; 3                                            ; 10                            ;
+; 4                                            ; 20                            ;
+; 5                                            ; 5                             ;
+; 6                                            ; 8                             ;
+; 7                                            ; 7                             ;
+; 8                                            ; 11                            ;
+; 9                                            ; 9                             ;
+; 10                                           ; 9                             ;
+; 11                                           ; 10                            ;
+; 12                                           ; 11                            ;
+; 13                                           ; 13                            ;
+; 14                                           ; 13                            ;
+; 15                                           ; 9                             ;
+; 16                                           ; 20                            ;
+; 17                                           ; 33                            ;
+; 18                                           ; 27                            ;
+; 19                                           ; 22                            ;
+; 20                                           ; 32                            ;
+; 21                                           ; 27                            ;
+; 22                                           ; 33                            ;
+; 23                                           ; 41                            ;
+; 24                                           ; 29                            ;
+; 25                                           ; 33                            ;
+; 26                                           ; 42                            ;
 ; 27                                           ; 24                            ;
-; 28                                           ; 35                            ;
-; 29                                           ; 23                            ;
-; 30                                           ; 33                            ;
-; 31                                           ; 23                            ;
+; 28                                           ; 36                            ;
+; 29                                           ; 26                            ;
+; 30                                           ; 29                            ;
+; 31                                           ; 26                            ;
 ; 32                                           ; 25                            ;
-; 33                                           ; 12                            ;
-; 34                                           ; 1                             ;
+; 33                                           ; 25                            ;
 +----------------------------------------------+-------------------------------+
 
 
@@ -2432,35 +2436,35 @@ Info (176353): Automatically promoted node GAME_TIMER:C3|timerOut
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:45
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:33
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 19% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 31% of the available device resources in the region that extends from location X21_Y10 to location X30_Y19
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:28
+Info (170195): Router estimated average interconnect usage is 21% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 37% of the available device resources in the region that extends from location X10_Y10 to location X20_Y19
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 8.95 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 7.32 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:06
-Info (144001): Generated suppressed messages file C:/Users/gusta/Desktop/snake-vhdl/code/VGA/output_files/VGA.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 850 megabytes
-    Info: Processing ended: Wed Jun 20 16:13:45 2018
-    Info: Elapsed time: 00:01:44
-    Info: Total CPU time (on all processors): 00:01:38
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (144001): Generated suppressed messages file C:/Users/DAELN/snake-vhdl/code/VGA/output_files/VGA.fit.smsg
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 596 megabytes
+    Info: Processing ended: Wed Jun 20 17:09:27 2018
+    Info: Elapsed time: 00:01:18
+    Info: Total CPU time (on all processors): 00:01:18
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/gusta/Desktop/snake-vhdl/code/VGA/output_files/VGA.fit.smsg.
+The suppressed messages can be found in C:/Users/DAELN/snake-vhdl/code/VGA/output_files/VGA.fit.smsg.
 
 
