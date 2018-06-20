@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.display_types.all;
+
+entity APPLE_CONTROLLER IS
+	port (
+		player1 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
+		player2 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
+		apple_position : out coordinate
+	);
+end entity;
+
+architecture main of APPLE_CONTROLLER is
+
+begin
+
+end architecture;

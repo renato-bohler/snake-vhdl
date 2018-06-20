@@ -6,8 +6,7 @@ use work.display_types.all;
 entity TOP_LEVEL IS
 	port (
 		clk : in std_logic;
-		up1, down1, left1, right1 : in std_logic;
-		up2, down2, left2, right2 : in std_logic;
+		ps2_clk, ps2_data : in std_logic;
 		VGA_HS, VGA_VS : out std_logic;
 		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
 		led_out : out std_logic
@@ -22,6 +21,26 @@ component GAME_TIMER is
 		timerOut : out std_logic
 	);
 end component;
+
+component ps2_keyboard IS
+  PORT(
+    clk          : IN  STD_LOGIC;                     --system clock
+    ps2_clk      : IN  STD_LOGIC;                     --clock signal from PS/2 keyboard
+    ps2_data     : IN  STD_LOGIC;                     --data signal from PS/2 keyboard
+    --ps2_code_new : OUT STD_LOGIC;                     --flag that new PS/2 code is available on ps2_code bus
+    --ps2_code     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); --code received from PS/2
+	 snake1Up	  : OUT STD_LOGIC;
+	 snake1Down	  : OUT STD_LOGIC;
+	 snake1Left	  : OUT STD_LOGIC;
+	 snake1Right  : OUT STD_LOGIC;
+	 snake1Special: OUT STD_LOGIC;
+	 snake2Up	  : OUT STD_LOGIC;
+	 snake2Down   : OUT STD_LOGIC;
+	 snake2Left	  : OUT STD_LOGIC;
+	 snake2Right  : OUT STD_LOGIC;
+	 snake2Special: OUT STD_LOGIC);
+	 --test			  : OUT STD_LOGIC);
+END component;
 
 component VGA is
 port (
@@ -75,6 +94,8 @@ end component;
 
 signal player1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
+signal up1, down1, left1, right1 , special1: std_logic;
+signal up2, down2, left2, right2 , special2: std_logic;
 
 signal score1, score2 : integer;
 signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer : std_logic;
@@ -87,7 +108,7 @@ begin
 	p2 : PLAYER_CONTROLLER PORT MAP (timer, up2, down2, left2, right2, player2);
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, (1, 1), (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
-
+	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2);
 	-- Debug
 	led_out <= gameOver;
 
