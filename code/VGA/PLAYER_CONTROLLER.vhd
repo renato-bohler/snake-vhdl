@@ -49,25 +49,33 @@ begin
 					player_position(i,0) <= player_position(i - 1,0);
 					player_position(i,1) <= player_position(i - 1,1);
 				end loop;
-				player_position(0,0) <= player_position(0,0) + 1;
+				player_position(0,0) <= (player_position(0,0) + 1) REM (H_SIZE -1);
 			elsif(player_direction = left_d) then
 				for i in 1 to MAX_ELEMENTS - 1 loop
 					player_position(i,0) <= player_position(i - 1,0);
 					player_position(i,1) <= player_position(i - 1,1);
 				end loop;
-				player_position(0,0) <= player_position(0,0) - 1;
+				if(player_position(0,0) <= 0) then
+					player_position(0,0) <= H_SIZE - 1;
+				else	
+					player_position(0,0) <= player_position(0,0) - 1;
+				end if;
 			elsif (player_direction = down_d) then
 				for i in 1 to MAX_ELEMENTS - 1 loop
 					player_position(i,0) <= player_position(i - 1,0);
 					player_position(i,1) <= player_position(i - 1,1);
 				end loop;
-				player_position(0,1) <= player_position(0,1) + 1;
+				player_position(0,1) <= (player_position(0,1) + 1) REM (V_SIZE - 1);
 			elsif (player_direction = up_d) then
 				for i in 1 to MAX_ELEMENTS - 1 loop
 					player_position(i,0) <= player_position(i - 1,0);
 					player_position(i,1) <= player_position(i - 1,1);
 				end loop;
-				player_position(0,1) <= player_position(0,1) - 1;
+				if(player_position(0,1) <= 0) then
+					player_position(0,1) <= V_SIZE - 1;
+				else
+					player_position(0,1) <= player_position(0,1) - 1;
+				end if;
 			end if;
 			player <= player_position;
 		end if;
