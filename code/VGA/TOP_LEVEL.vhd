@@ -56,6 +56,7 @@ end component;
 component PLAYER_CONTROLLER IS
 	port (
 		timer : in std_logic;
+		playerScore : in integer;
 		up, down, left, right : in std_logic;
 		player : out coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
 	);
@@ -104,10 +105,10 @@ begin
 
 	C3 : GAME_TIMER PORT MAP (clk, timer);
 	Apple : APPLE_CONTROLLER PORT MAP (clk, snake1AteApple, snake2AteApple, player1, player2, apple_position);
-	p1 : PLAYER_CONTROLLER PORT MAP (timer, up1, down1, left1, right1, player1);
-	p2 : PLAYER_CONTROLLER PORT MAP (timer, up2, down2, left2, right2, player2);
+	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1, up1, down1, left1, right1, player1);
+	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2, up2, down2, left2, right2, player2);
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
-	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, (1, 1), (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
+	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, apple_position, (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
 	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2);
 	-- Debug
 	led_out <= gameOver;

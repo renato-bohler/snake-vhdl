@@ -32,7 +32,7 @@ begin
 		variable singleAct : std_logic := '0';
 	begin
 		if(singleAct = '0' and (player1AteApple = '1' or player2AteApple = '1' or appleExists = '0')) then
-			apple_position(0) <= 10;
+			apple_position(0) <= 12;
 			apple_position(1) <= 12;
 			appleExists <= '1';
 			singleAct := '1';
