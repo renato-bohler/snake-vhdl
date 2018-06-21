@@ -80,9 +80,15 @@ begin
 		
 		if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1))) then
 			score1Var := score1Var + 1;
+			snake1AteApple <= '1';
+		else 
+			snake1AteApple <= '0';
 		end if;
 		if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1))) then
 			score2Var := score2Var + 1;
+			snake2AteApple <= '1';
+		else 
+			snake2AteApple <= '0';
 		end if;
 		score1 <= score1Var;
 		score2 <= score2Var;

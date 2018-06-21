@@ -13,8 +13,6 @@ entity PLAYER_CONTROLLER IS
 end entity;
 
 architecture main of PLAYER_CONTROLLER is
-
-
 signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (1,1));
 signal player_direction : integer;
 
@@ -26,10 +24,10 @@ constant down_d : integer := 3;
 constant left_d : integer := 4;
 constant default_d : integer := 5;
 
+
 begin
 	
 	process (timer)
-	
 	begin
 		playerSize <= 3 + playerScore;
 		if(rising_edge(timer)) then
@@ -46,59 +44,64 @@ begin
 	end process;
 	
 	process (timer)
+		variable timerCounter : integer := 0;
 	begin
 		if(rising_edge(timer)) then
-			if(player_direction = right_d) then
-				for i in 1 to MAX_ELEMENTS - 1 loop
-					if(i < playerSize) then
-						player_position(i,0) <= player_position(i - 1,0);
-						player_position(i,1) <= player_position(i - 1,1);
-					else
-						player_position(i,0) <= -1;
-						player_position(i,1) <= -1;
+			timerCounter := timerCounter +1;
+			if(timerCounter > 79) then
+				timerCounter := 0;
+				if(player_direction = right_d) then
+					for i in 1 to MAX_ELEMENTS - 1 loop
+						if(i < playerSize) then
+							player_position(i,0) <= player_position(i - 1,0);
+							player_position(i,1) <= player_position(i - 1,1);
+						else
+							player_position(i,0) <= -1;
+							player_position(i,1) <= -1;
+						end if;
+					end loop;
+					player_position(0,0) <= (player_position(0,0) + 1) REM (H_SIZE -1);
+				elsif(player_direction = left_d) then
+					for i in 1 to MAX_ELEMENTS - 1 loop
+						if(i < playerSize) then
+							player_position(i,0) <= player_position(i - 1,0);
+							player_position(i,1) <= player_position(i - 1,1);
+						else
+							player_position(i,0) <= -1;
+							player_position(i,1) <= -1;
+						end if;						
+					end loop;
+					if(player_position(0,0) <= 0) then
+						player_position(0,0) <= H_SIZE - 1;
+					else	
+						player_position(0,0) <= player_position(0,0) - 1;
 					end if;
-				end loop;
-				player_position(0,0) <= (player_position(0,0) + 1) REM (H_SIZE -1);
-			elsif(player_direction = left_d) then
-				for i in 1 to MAX_ELEMENTS - 1 loop
-					if(i < playerSize) then
-						player_position(i,0) <= player_position(i - 1,0);
-						player_position(i,1) <= player_position(i - 1,1);
+				elsif (player_direction = down_d) then
+					for i in 1 to MAX_ELEMENTS - 1 loop
+						if(i < playerSize) then
+							player_position(i,0) <= player_position(i - 1,0);
+							player_position(i,1) <= player_position(i - 1,1);
+						else
+							player_position(i,0) <= -1;
+							player_position(i,1) <= -1;
+						end if;
+					end loop;
+					player_position(0,1) <= (player_position(0,1) + 1) REM (V_SIZE - 1);
+				elsif (player_direction = up_d) then
+					for i in 1 to MAX_ELEMENTS - 1 loop
+						if(i < playerSize) then
+							player_position(i,0) <= player_position(i - 1,0);
+							player_position(i,1) <= player_position(i - 1,1);
+						else
+							player_position(i,0) <= -1;
+							player_position(i,1) <= -1;
+						end if;
+					end loop;
+					if(player_position(0,1) <= 0) then
+						player_position(0,1) <= V_SIZE - 1;
 					else
-						player_position(i,0) <= -1;
-						player_position(i,1) <= -1;
-					end if;						
-				end loop;
-				if(player_position(0,0) <= 0) then
-					player_position(0,0) <= H_SIZE - 1;
-				else	
-					player_position(0,0) <= player_position(0,0) - 1;
-				end if;
-			elsif (player_direction = down_d) then
-				for i in 1 to MAX_ELEMENTS - 1 loop
-					if(i < playerSize) then
-						player_position(i,0) <= player_position(i - 1,0);
-						player_position(i,1) <= player_position(i - 1,1);
-					else
-						player_position(i,0) <= -1;
-						player_position(i,1) <= -1;
+						player_position(0,1) <= player_position(0,1) - 1;
 					end if;
-				end loop;
-				player_position(0,1) <= (player_position(0,1) + 1) REM (V_SIZE - 1);
-			elsif (player_direction = up_d) then
-				for i in 1 to MAX_ELEMENTS - 1 loop
-					if(i < playerSize) then
-						player_position(i,0) <= player_position(i - 1,0);
-						player_position(i,1) <= player_position(i - 1,1);
-					else
-						player_position(i,0) <= -1;
-						player_position(i,1) <= -1;
-					end if;
-				end loop;
-				if(player_position(0,1) <= 0) then
-					player_position(0,1) <= V_SIZE - 1;
-				else
-					player_position(0,1) <= player_position(0,1) - 1;
 				end if;
 			end if;
 			player <= player_position;
