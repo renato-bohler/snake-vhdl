@@ -9,7 +9,13 @@ entity TOP_LEVEL IS
 		ps2_clk, ps2_data : in std_logic;
 		VGA_HS, VGA_VS : out std_logic;
 		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
-		led_out : out std_logic
+		sound_buzzer : out std_logic;
+
+		led_gameOver : out std_logic;
+		led_snake1AteApple : out std_logic;
+		led_snake2AteApple : out std_logic;
+		led_snake1AteSpecial : out std_logic;
+		led_snake2AteSpecial : out std_logic
 	);
 end entity;
 
@@ -93,6 +99,18 @@ component APPLE_CONTROLLER IS
 	);
 end component;
 
+component sound is
+	port(
+		clock : IN std_logic;
+    	snake1AteApple : IN std_logic;
+    	snake2AteApple : IN std_logic;
+    	snake1AteSpecial : IN std_logic;
+    	snake2AteSpecial : IN std_logic;
+    	gameOver: IN std_logic;
+    	buzzer : OUT std_logic
+	);
+end component;
+
 signal player1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal up1, down1, left1, right1 , special1: std_logic;
@@ -110,7 +128,12 @@ begin
 	vga1 : VGA PORT MAP (clk, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, '0', player1, player2, apple_position, (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver);
 	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2);
+	sound_ctrl : sound PORT MAP (clk, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, sound_buzzer);
 	-- Debug
-	led_out <= gameOver;
+	led_gameOver <= gameOver;
+	led_snake1AteApple <= snake1AteApple;
+	led_snake2AteApple <= snake2AteApple;
+	led_snake1AteSpecial <= snake1AteSpecial;
+	led_snake2AteSpecial <= snake2AteSpecial;
 
 end architecture;
