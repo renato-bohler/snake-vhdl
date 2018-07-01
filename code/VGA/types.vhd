@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 package display_types is
 	constant PIXEL_SIZE : integer := 16;
-	constant MAX_ELEMENTS : integer := 4;
+	constant MAX_ELEMENTS : integer := 32;
 	constant FIXED_SCREEN_ELEMENTS : integer range 0 to 601:= 600;
 	constant ANIMATIONTIME : integer := 1 *50000;
 	constant H_SIZE : integer := 80;

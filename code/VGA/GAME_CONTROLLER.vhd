@@ -147,10 +147,10 @@ process(gameTick)
 begin
 	if(rising_edge(gameTick)) then
 		if(started = '1') then
-			if(scorePlayer1 >= MAX_ELEMENTS -1) then
+			if(scorePlayer1 >= MAX_ELEMENTS - 3) then
 				varPlayer1Wins := '1';
 			end if;
-			if(scorePlayer2 >= MAX_ELEMENTS -1) then
+			if(scorePlayer2 >= MAX_ELEMENTS - 3) then
 				varPlayer2Wins := '1';
 			end if;
 			if(player1Collided = '1') then
