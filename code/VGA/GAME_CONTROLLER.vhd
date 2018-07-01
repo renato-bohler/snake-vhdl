@@ -69,6 +69,8 @@ process(gameTick)
 	variable xCabecaCobra2			: integer;
 	variable yCabecaCobra2			: integer;
 	
+	variable singleAct1 : std_logic := '0';
+	variable singleAct2 : std_logic := '0';
 begin
 	if(rising_edge(gameTick)) then
 		-- Detecção de colisão cobra 1 <=> cobra 2
@@ -78,17 +80,23 @@ begin
 		xCabecaCobra2 := snake2Matrix(0,0);
 		yCabecaCobra2 := snake2Matrix(0,1);
 		
-		if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1))) then
+		if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1)) and singleAct1 = '0') then 
 			score1Var := score1Var + 1;
 			snake1AteApple <= '1';
-		else 
+			singleAct1 := '1';
+		elsif(singleAct1 = '1' and (xCabecaCobra1 /= appleMatrix(0) or yCabecaCobra1 /= appleMatrix(1))) then
+			snake1AteApple <= '0';
+			singleAct1 := '0';
+		else
 			snake1AteApple <= '0';
 		end if;
-		if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1))) then
+		if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1)) and singleAct2 = '0') then
 			score2Var := score2Var + 1;
 			snake2AteApple <= '1';
+			singleAct2 := '1';
 		else 
 			snake2AteApple <= '0';
+			singleAct2 := '0';
 		end if;
 		score1 <= score1Var;
 		score2 <= score2Var;
