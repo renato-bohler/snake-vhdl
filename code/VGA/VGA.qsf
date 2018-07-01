@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP3C16F484C6
 set_global_assignment -name TOP_LEVEL_ENTITY TOP_LEVEL
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:39:24  JUNE 13, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -85,6 +85,39 @@ set_location_assignment PIN_B2 -to led_snake1AteApple
 set_location_assignment PIN_C2 -to led_snake1AteSpecial
 set_location_assignment PIN_C1 -to led_snake2AteApple
 set_location_assignment PIN_E1 -to led_snake2AteSpecial
+set_location_assignment PIN_B18 -to score_ssds[3][6]
+set_location_assignment PIN_F15 -to score_ssds[3][5]
+set_location_assignment PIN_A19 -to score_ssds[3][4]
+set_location_assignment PIN_B19 -to score_ssds[3][3]
+set_location_assignment PIN_C19 -to score_ssds[3][2]
+set_location_assignment PIN_D19 -to score_ssds[3][1]
+set_location_assignment PIN_G15 -to score_ssds[3][0]
+set_location_assignment PIN_D15 -to score_ssds[2][6]
+set_location_assignment PIN_A16 -to score_ssds[2][5]
+set_location_assignment PIN_B16 -to score_ssds[2][4]
+set_location_assignment PIN_E15 -to score_ssds[2][3]
+set_location_assignment PIN_A17 -to score_ssds[2][2]
+set_location_assignment PIN_B17 -to score_ssds[2][1]
+set_location_assignment PIN_F14 -to score_ssds[2][0]
+set_location_assignment PIN_A13 -to score_ssds[1][6]
+set_location_assignment PIN_B13 -to score_ssds[1][5]
+set_location_assignment PIN_C13 -to score_ssds[1][4]
+set_location_assignment PIN_A14 -to score_ssds[1][3]
+set_location_assignment PIN_B14 -to score_ssds[1][2]
+set_location_assignment PIN_E14 -to score_ssds[1][1]
+set_location_assignment PIN_A15 -to score_ssds[1][0]
+set_location_assignment PIN_E11 -to score_ssds[0][6]
+set_location_assignment PIN_F11 -to score_ssds[0][5]
+set_location_assignment PIN_H12 -to score_ssds[0][4]
+set_location_assignment PIN_H13 -to score_ssds[0][3]
+set_location_assignment PIN_G12 -to score_ssds[0][2]
+set_location_assignment PIN_F12 -to score_ssds[0][1]
+set_location_assignment PIN_F13 -to score_ssds[0][0]
+set_location_assignment PIN_J1 -to led_out
+set_location_assignment PIN_J6 -to gameStartButton
+set_location_assignment PIN_J3 -to led_out_collision
+set_location_assignment PIN_J2 -to led_out_gameStart
+set_global_assignment -name VHDL_FILE PLAYER2_CONTROLLER.vhd
 set_global_assignment -name VHDL_FILE hit.vhd
 set_global_assignment -name VHDL_FILE sound.vhd
 set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
