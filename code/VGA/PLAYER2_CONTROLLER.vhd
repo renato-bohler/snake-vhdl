@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.display_types.all;
 
-entity PLAYER_CONTROLLER IS
+entity PLAYER2_CONTROLLER IS
 	port (
 		timer : in std_logic;
 		playerScore : in integer;
@@ -13,9 +13,9 @@ entity PLAYER_CONTROLLER IS
 	);
 end entity;
 
-architecture main of PLAYER_CONTROLLER is
-constant starting_player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-1,-1));
-signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-2,-2));
+architecture main of PLAYER2_CONTROLLER is
+constant starting_player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,2), 1 => (2,2), 2 => (1,2), others => (-1,-1));
+signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,2), 1 => (2,2), 2 => (1,2), others => (-1,-1));
 signal player_direction : integer range 0 to 6;
 signal snake_direction : integer range 0 to 6;
 
@@ -44,8 +44,6 @@ begin
 				elsif (up = '1' and snake_direction /= down_d) then
 					player_direction <= up_d;
 				end if;
-			else
-				player_direction <= right_d;
 			end if;
 		end if;
 	end process;

@@ -102,32 +102,37 @@ process(gameTick)
 	variable singleAct2 : std_logic := '0';
 begin
 	if(rising_edge(gameTick)) then
-		-- Detecção de colisão cobra 1 <=> cobra 2
-		xCabecaCobra1 := snake1Matrix(0,0);
-		yCabecaCobra1 := snake1Matrix(0,1);
-		
-		xCabecaCobra2 := snake2Matrix(0,0);
-		yCabecaCobra2 := snake2Matrix(0,1);
-		
-		if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1)) and singleAct1 = '0') then 
-			score1Var := score1Var + 1;
-			snake1AteApple <= '1';
-			singleAct1 := '1';
-		elsif(singleAct1 = '1' and (xCabecaCobra1 /= appleMatrix(0) or yCabecaCobra1 /= appleMatrix(1))) then
-			snake1AteApple <= '0';
-			singleAct1 := '0';
+		if(started = '1') then
+			-- Detecção de colisão cobra 1 <=> cobra 2
+			xCabecaCobra1 := snake1Matrix(0,0);
+			yCabecaCobra1 := snake1Matrix(0,1);
+			
+			xCabecaCobra2 := snake2Matrix(0,0);
+			yCabecaCobra2 := snake2Matrix(0,1);
+			
+			if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1)) and singleAct1 = '0') then 
+				score1Var := score1Var + 1;
+				snake1AteApple <= '1';
+				singleAct1 := '1';
+			elsif(singleAct1 = '1' and (xCabecaCobra1 /= appleMatrix(0) or yCabecaCobra1 /= appleMatrix(1))) then
+				snake1AteApple <= '0';
+				singleAct1 := '0';
+			else
+				snake1AteApple <= '0';
+			end if;
+			if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1)) and singleAct2 = '0') then
+				score2Var := score2Var + 1;
+				snake2AteApple <= '1';
+				singleAct2 := '1';
+			elsif(singleAct2 = '1' and (xCabecaCobra2 /= appleMatrix(0) or yCabecaCobra2 /= appleMatrix(1))) then
+				snake2AteApple <= '0';
+				singleAct2 := '0';
+			else 
+				snake2AteApple <= '0';
+			end if;
 		else
-			snake1AteApple <= '0';
-		end if;
-		if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1)) and singleAct2 = '0') then
-			score2Var := score2Var + 1;
-			snake2AteApple <= '1';
-			singleAct2 := '1';
-		elsif(singleAct2 = '1' and (xCabecaCobra2 /= appleMatrix(0) or yCabecaCobra2 /= appleMatrix(1))) then
-			snake2AteApple <= '0';
-			singleAct2 := '0';
-		else 
-			snake2AteApple <= '0';
+			score1Var := 0;
+			score2Var := 0;
 		end if;
 		scorePlayer1 <= score1Var;
 		scorePlayer2 <= score2Var;
@@ -141,19 +146,24 @@ process(gameTick)
 	variable varPlayer2Wins : std_logic := '0';
 begin
 	if(rising_edge(gameTick)) then
-		if(scorePlayer1 >= MAX_ELEMENTS -1) then
-			varPlayer1Wins := '1';
-		end if;
-		if(scorePlayer2 >= MAX_ELEMENTS -1) then
-			varPlayer2Wins := '1';
-		end if;
-		if(player1Collided = '1') then
-			varPlayer2Wins := '1';
-		end if;
-		if(player2Collided = '1') then
-			varPlayer1Wins := '1';
-		end if;
-		if(varPlayer1Wins = '1' and varPlayer2Wins = '1') then
+		if(started = '1') then
+			if(scorePlayer1 >= MAX_ELEMENTS -1) then
+				varPlayer1Wins := '1';
+			end if;
+			if(scorePlayer2 >= MAX_ELEMENTS -1) then
+				varPlayer2Wins := '1';
+			end if;
+			if(player1Collided = '1') then
+				varPlayer2Wins := '1';
+			end if;
+			if(player2Collided = '1') then
+				varPlayer1Wins := '1';
+			end if;
+			if(varPlayer1Wins = '1' and varPlayer2Wins = '1') then
+				varPlayer2Wins := '0';
+			end if;
+		else
+			varPlayer1Wins := '0';
 			varPlayer2Wins := '0';
 		end if;
 		player1won <= varPlayer1Wins;
