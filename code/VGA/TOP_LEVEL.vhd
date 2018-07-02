@@ -64,6 +64,7 @@ component PLAYER_CONTROLLER IS
 		timer : in std_logic;
 		playerScore : in integer;
 		up, down, left, right : in std_logic;
+		special : in std_logic;
 		game_start : std_logic;
 		player : out coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
 	);
@@ -73,6 +74,7 @@ component PLAYER2_CONTROLLER IS
 		timer : in std_logic;
 		playerScore : in integer;
 		up, down, left, right : in std_logic;
+		special : in std_logic;
 		game_start : std_logic;
 		player : out coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
 	);
@@ -103,6 +105,8 @@ end component;
 component APPLE_CONTROLLER IS
 	port (
 		clk 	  : in std_logic;
+		gameTick : in std_logic;
+		gameStarted : in std_logic;
 		player1AteApple 	  : in std_logic;
 		player2AteApple 	  : in std_logic;
 		player1 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
@@ -133,9 +137,9 @@ begin
 
 	C3 : GAME_TIMER PORT MAP (clk, timer);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, gameStartButton, player1, player2, apple_position, (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial,gameStarted,player1won, player2won);
-	Apple : APPLE_CONTROLLER PORT MAP (clk, snake1AteApple, snake2AteApple, player1, player2, apple_position);
-	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1, up1, down1, left1, right1, gameStarted, player1);
-	p2 : PLAYER2_CONTROLLER PORT MAP (timer,score2, up2, down2, left2, right2, gameStarted, player2);
+	Apple : APPLE_CONTROLLER PORT MAP (clk, timer,gameStarted, snake1AteApple, snake2AteApple, player1, player2, apple_position);
+	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1, up1, down1, left1, right1, special1,gameStarted, player1);
+	p2 : PLAYER2_CONTROLLER PORT MAP (timer,score2, up2, down2, left2, right2, special2, gameStarted, player2);
 	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
 	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2);
 	scoreC : ScoreController PORT MAP (score1, score2, timer, score_ssds);

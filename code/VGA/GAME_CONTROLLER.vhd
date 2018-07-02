@@ -27,8 +27,8 @@ end entity;
 architecture main of GAME_CONTROLLER is
 
 
-signal player1Collided : bit := '0';
-signal player2Collided : bit := '0';
+signal player1Collided : std_logic := '0';
+signal player2Collided : std_logic := '0';
 
 signal scorePlayer1 : integer;
 signal scorePlayer2 : integer;
@@ -53,7 +53,11 @@ end process;
 process(gameTick)
 
 	variable snakesCollided			: std_logic := '0';
-
+	
+	variable internalPlayer1Collided			: std_logic := '0';
+	variable internalPlayer2Collided 	: std_logic := '0';
+	
+	
 	variable xCabecaCobra1			: integer;
 	variable yCabecaCobra1			: integer;
 	
@@ -65,6 +69,8 @@ begin
 		-- Detecção de colisão cobra 1 <=> cobra 2
 		if(started = '1') then
 			snakesCollided := '0';
+			internalPlayer1Collided := '0';
+			internalPlayer2Collided := '0';
 			
 			xCabecaCobra1 := snake1Matrix(0,0);
 			yCabecaCobra1 := snake1Matrix(0,1);
@@ -74,16 +80,14 @@ begin
 			
 			for i in 0 to MAX_ELEMENTS - 1 loop
 				if ((xCabecaCobra1 = snake2Matrix(i,0) and yCabecaCobra1 = snake2Matrix(i,1))) then
-					player1Collided <= '1';
-				else
-					player1Collided <= '0';
+					internalPlayer1Collided := '1';
 				end if;
 				if((xCabecaCobra2 = snake1Matrix(i,0) and yCabecaCobra2 = snake1Matrix(i,1))) then
-					player2Collided <= '1';
-				else
-					player2Collided <= '0';
+					internalPlayer2Collided := '1';
 				end if;
 			end loop;
+			player1Collided <= internalPlayer1Collided;
+			player2Collided <= internalPlayer2Collided;
 		end if;
 	end if;
 end process;

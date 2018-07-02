@@ -72,6 +72,10 @@ process(clk)
 variable hMatrix, vMatrix : integer := 0;
 variable draw : std_logic := '0';
 
+variable is_element : std_logic := '0';
+variable is_player1 : std_logic := '0';
+variable is_player2 : std_logic := '0';
+
 begin
 
 	if(rising_edge(clk)) then
@@ -79,20 +83,29 @@ begin
 			if(gameStarted = '0') then
 				hMatrix := (hpos - H_OFFSET)/PIXEL_SIZE;
 				vMatrix := (vpos - V_OFFSET)/PIXEL_SIZE;
-				if((hpos - H_OFFSET) REM PIXEL_SIZE = 0 or (vpos - V_OFFSET) REM PIXEL_SIZE = 0) then
+				if((hpos - H_OFFSET) MOD PIXEL_SIZE = 0 or (vpos - V_OFFSET) MOD PIXEL_SIZE = 0) then
 					r <= (others => '0');
 					g <= (others => '0');
 					b <= (others => '0');
 				else
+					is_element := '0';
 					for i in 0 to FIXED_SCREEN_ELEMENTS - 1 loop
 						if(vMatrix = gameStartImage(i, 1)) then
 							if(hMatrix = gameStartImage(i,0)) then
-								r <= (others => '1');
-								g <= (others => '1');
-								b <= (others => '1');
+								is_element := '1';
 							end if;
 						end if;
 					end loop;
+					
+					if(is_element = '1') then
+						r <= (others => '1');
+						g <= (others => '1');
+						b <= (others => '1');
+					else
+						r <= (0 => '1', others => '0');
+						g <= (0 => '1', others => '0');
+						b <= (0 => '1', others => '0');
+					end if;
 				end if;
 			elsif(player1won = '1') then
 				hMatrix := (hpos - H_OFFSET)/PIXEL_SIZE;
@@ -102,13 +115,21 @@ begin
 					g <= (others => '0');
 					b <= (others => '0');
 				else
+					is_element := '0';
 					for i in 0 to FIXED_SCREEN_ELEMENTS - 1 loop
 						if(vMatrix = player1winsImage(i, 1)) then
 							if(hMatrix = player1winsImage(i,0)) then
-								r <= (others => '1');
-								g <= (others => '1');
-								b <= (others => '1');
+								is_element := '1';
 							end if;
+						end if;
+						if(is_element = '1') then
+							r <= (others => '1');
+							g <= (others => '1');
+							b <= (others => '1');
+						else
+							r <= (0 => '1', others => '0');
+							g <= (0 => '1', others => '0');
+							b <= (0 => '1', others => '0');
 						end if;
 					end loop;
 				end if;
@@ -120,13 +141,21 @@ begin
 					g <= (others => '0');
 					b <= (others => '0');
 				else
+					is_element := '0';
 					for i in 0 to FIXED_SCREEN_ELEMENTS - 1 loop
 						if(vMatrix = player2winsImage(i, 1)) then
 							if(hMatrix = player2winsImage(i,0)) then
-								r <= (others => '1');
-								g <= (others => '1');
-								b <= (others => '1');
+								is_element := '1';
 							end if;
+						end if;						
+						if(is_element = '1') then
+							r <= (others => '1');
+							g <= (others => '1');
+							b <= (others => '1');
+						else
+							r <= (0 => '1', others => '0');
+							g <= (0 => '1', others => '0');
+							b <= (0 => '1', others => '0');
 						end if;
 					end loop;
 				end if;
@@ -138,48 +167,52 @@ begin
 					g <= (others => '0');
 					b <= (others => '0');
 				else
+					is_player1 := '0';
 					for i in 0 to MAX_ELEMENTS - 1 loop
 						if(vMatrix = player1(i, 1)) then
 							if(hMatrix = player1(i,0)) then
 								if(circleImage((hpos - H_OFFSET) REM PIXEL_SIZE, (vpos - V_OFFSET) REM PIXEL_SIZE) = '0') then
-									r <= (others => '1');
-									g <= (others => '0');
-									b <= (others => '1');
-								else
-									r <= (others => '0');
-									g <= (others => '0');
-									b <= (others => '0');
+									is_player1 := '1';
 								end if;
 							end if;
 						end if;
-					end loop;
+					end loop;	
+					is_player2 := '0';
 					for i in 0 to MAX_ELEMENTS - 1 loop
 						if(vMatrix = player2(i, 1)) then
 							if(hMatrix = player2(i,0)) then
 								if(circleImage((hpos - H_OFFSET) REM PIXEL_SIZE, (vpos - V_OFFSET) REM PIXEL_SIZE) = '0') then
-									r <= (others => '0');
-									g <= (others => '0');
-									b <= (others => '1');
-								else
-									r <= (others => '0');
-									g <= (others => '0');
-									b <= (others => '0');
+									is_player2 := '1';
 								end if;
 							end if;
 						end if;
 					end loop;
+							
+					is_element := '0';
 					if(vMatrix = apple_position(1)) then
 						if(hMatrix = apple_position(0)) then
-							if(circleImage((hpos - H_OFFSET) REM PIXEL_SIZE, (vpos - V_OFFSET) REM PIXEL_SIZE) = '0') then
-								r <= (others => '1');
-								g <= (others => '1');
-								b <= (others => '1');
-							else
-								r <= (others => '0');
-								g <= (others => '0');
-								b <= (others => '0');
+							if(circleImage((hpos - H_OFFSET) REM PIXEL_SIZE, (vpos - V_OFFSET) REM PIXEL_SIZE) = '0') then	
+								is_element := '1';
 							end if;
 						end if;
+					end if;
+					
+					if(is_player1 = '1') then
+						r <= (others => '1');
+						g <= (others => '0');
+						b <= (others => '1');
+					elsif(is_player2 = '1') then
+						r <= (others => '0');
+						g <= (others => '0');
+						b <= (others => '1');
+					elsif(is_element = '1') then
+						r <= (others => '1');
+						g <= (others => '1');
+						b <= (others => '1');
+					else
+						r <= (0 => '1', others => '0');
+						g <= (0 => '1', others => '0');
+						b <= (0 => '1', others => '0');
 					end if;
 				end if;
 			end if;

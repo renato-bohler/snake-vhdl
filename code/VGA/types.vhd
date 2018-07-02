@@ -4,9 +4,10 @@ use ieee.numeric_std.all;
 
 package display_types is
 	constant PIXEL_SIZE : integer := 16;
-	constant MAX_ELEMENTS : integer := 32;
+	constant MAX_ELEMENTS : integer := 4;
 	constant FIXED_SCREEN_ELEMENTS : integer range 0 to 601:= 600;
 	constant ANIMATIONTIME : integer := 1 *50000;
+	constant PERIODTIME : integer := 50000000;
 	constant H_SIZE : integer := 80;
 	constant V_SIZE : integer := 64;
 	type display_matrix is array(natural range <>, natural range <>) of integer range -1 to H_SIZE;
