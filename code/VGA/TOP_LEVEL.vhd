@@ -6,7 +6,6 @@ use work.display_types.all;
 entity TOP_LEVEL IS
 	port (
 		clk : in std_logic;
-		gameStartButton: in std_logic;
 		ps2_clk, ps2_data : in std_logic;
 		VGA_HS, VGA_VS : out std_logic;
 		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
@@ -41,7 +40,8 @@ component ps2_keyboard IS
 	 snake2Down   : OUT STD_LOGIC;
 	 snake2Left	  : OUT STD_LOGIC;
 	 snake2Right  : OUT STD_LOGIC;
-	 snake2Special: OUT STD_LOGIC);
+	 snake2Special: OUT STD_LOGIC;
+	 gameStart    : OUT STD_LOGIC);
 	 --test			  : OUT STD_LOGIC);
 END component;
 
@@ -119,6 +119,7 @@ signal player1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal up1, down1, left1, right1 , special1: std_logic;
 signal up2, down2, left2, right2 , special2: std_logic;
+signal gameStartButton: std_logic;
 
 signal score1, score2 : integer;
 signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer , gameStarted: std_logic;
@@ -132,7 +133,7 @@ begin
 	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1,'1', up1, down1, left1, right1, special1,gameStarted, player1);
 	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2,'0', up2, down2, left2, right2, special2, gameStarted, player2);
 	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
-	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2);
+	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2, gameStartButton);
 	scoreC : ScoreController PORT MAP (score1, score2, timer, score_ssds);
 	-- Debug
 	led_out_collision <= gameOver;

@@ -20,7 +20,8 @@ ENTITY ps2_keyboard IS
 	 snake2Down   : OUT STD_LOGIC;
 	 snake2Left	  : OUT STD_LOGIC;
 	 snake2Right  : OUT STD_LOGIC;
-	 snake2Special: OUT STD_LOGIC);
+	 snake2Special: OUT STD_LOGIC;
+	 gameStart    : OUT STD_LOGIC);
 	 --test			  : OUT STD_LOGIC);
 END ps2_keyboard;
 
@@ -122,8 +123,10 @@ BEGIN
 						snake1Left <= '0';
 					WHEN x"23" =>
 						snake1Right <= '0';
-					WHEN x"29" =>
+					WHEN x"14" =>
 						snake1Special <= '0';
+					WHEN x"5A" =>
+						gameStart <= '0';
 					WHEN OTHERS =>
 				END CASE;
 			ELSIF ps2_code_old1 = x"E0" THEN
@@ -166,8 +169,10 @@ BEGIN
 						snake1Left <= '1';
 					WHEN x"23" =>
 						snake1Right <= '1';
-					WHEN x"29" =>
+					WHEN x"14" =>
 						snake1Special <= '1';
+					WHEN x"5A" =>
+						gameStart <= '1';
 					WHEN OTHERS =>
 				END CASE;
 			END IF;

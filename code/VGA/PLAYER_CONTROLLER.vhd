@@ -18,7 +18,7 @@ end entity;
 architecture main of PLAYER_CONTROLLER is
 constant starting_player_position1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-1,-1));
 constant starting_player_position2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,2), 1 => (2,2), 2 => (1,2), others => (-1,-1));
-signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-2,-2));
+signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player_direction : integer range 0 to 6;
 signal snake_direction : integer range 0 to 6;
 

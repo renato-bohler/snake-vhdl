@@ -37,14 +37,22 @@ signal started : std_logic;
 begin
 
 process(gameTick)
+	constant pamonhaNaMandiocaTime : integer := 10;
+	variable timerCounter : integer := 0;
+	variable singleAct 	 : std_logic := '0';
 begin
 	if(rising_edge(gameTick)) then
-		if(gameStart = '0') then
-			gameStarted <= '1';
-			started <= '1';
+		if(timerCounter > pamonhaNaMandiocaTime) then
+			timerCounter := 0;
+			if(gameStart = '1' and singleAct = '0') then
+				gameStarted <= not started;
+				started <= not started;
+				singleAct := '1';
+			elsif(gameStart = '0' and singleAct = '1') then
+				singleAct := '0';
+			end if;
 		else
-			gameStarted <= '0';
-			started <= '0';
+			timerCounter := timerCounter + 1;
 		end if;
 	end if;
 end process;
@@ -86,6 +94,14 @@ begin
 					internalPlayer2Collided := '1';
 				end if;
 			end loop;
+			for i in 1 to MAX_ELEMENTS - 1 loop
+				if ((xCabecaCobra1 = snake1Matrix(i,0) and yCabecaCobra1 = snake1Matrix(i,1))) then
+					internalPlayer1Collided := '1';
+				end if;
+				if((xCabecaCobra2 = snake2Matrix(i,0) and yCabecaCobra2 = snake2Matrix(i,1))) then
+					internalPlayer2Collided := '1';
+				end if;
+			end loop;
 			player1Collided <= internalPlayer1Collided;
 			player2Collided <= internalPlayer2Collided;
 		end if;
@@ -115,7 +131,7 @@ begin
 			yCabecaCobra2 := snake2Matrix(0,1);
 			
 			if ((xCabecaCobra1 = appleMatrix(0) and yCabecaCobra1 = appleMatrix(1)) and singleAct1 = '0') then 
-				score1Var := score1Var + 1;
+				score1Var := score1Var + 10;
 				snake1AteApple <= '1';
 				singleAct1 := '1';
 			elsif(singleAct1 = '1' and (xCabecaCobra1 /= appleMatrix(0) or yCabecaCobra1 /= appleMatrix(1))) then
@@ -125,7 +141,7 @@ begin
 				snake1AteApple <= '0';
 			end if;
 			if ((xCabecaCobra2 = appleMatrix(0) and yCabecaCobra2 = appleMatrix(1)) and singleAct2 = '0') then
-				score2Var := score2Var + 1;
+				score2Var := score2Var + 10;
 				snake2AteApple <= '1';
 				singleAct2 := '1';
 			elsif(singleAct2 = '1' and (xCabecaCobra2 /= appleMatrix(0) or yCabecaCobra2 /= appleMatrix(1))) then

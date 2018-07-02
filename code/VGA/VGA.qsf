@@ -131,5 +131,4 @@ set_global_assignment -name VHDL_FILE PLAYER_CONTROLLER.vhd
 set_global_assignment -name VHDL_FILE types.vhd
 set_global_assignment -name VHDL_FILE GAME_TIMER.vhd
 set_global_assignment -name VHDL_FILE GAME_CONTROLLER.vhd
-set_global_assignment -name VHDL_FILE SECOND_TIMER.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
