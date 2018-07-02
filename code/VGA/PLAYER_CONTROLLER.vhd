@@ -47,7 +47,7 @@ begin
 	ONESECOND : SECOND_TIMER PORT MAP(timer, timerReset, oneSecondTimer);
 	process (timer)
 	begin
-		playerSize <= 3 + playerScore;
+		playerSize <= playerScore;
 		if(rising_edge(timer)) then
 			if(game_start = '1') then
 				if(right = '1' and snake_direction /= left_d) then
@@ -60,7 +60,11 @@ begin
 					player_direction <= up_d;
 				end if;
 			else
-				player_direction <= right_d;
+				if(playerNumber = '1') then
+					player_direction <= right_d;
+				else
+					player_direction <= down_d;
+				end if;
 			end if;
 		end if;
 	end process;
@@ -81,10 +85,10 @@ begin
 				end if;
 			end if;
 			timerCounter := (timerCounter + 1) MOD (10000);
-			if(timerCounter >= 2000) then
+			if(timerCounter >= 2*PERIODTIME) then
 				specialActive := '0';
 			end if;
-			if(timerCounter >= 10000-1) then
+			if(timerCounter >= 10*PERIODTIME-1) then
 				allowSpecial := '1';
 			end if;
 			if(specialActive = '1') then
@@ -115,7 +119,7 @@ begin
 								player_position(i,1) <= -1;
 							end if;
 						end loop;
-						player_position(0,0) <= (player_position(0,0) + 1) REM (H_SIZE + 1);
+						player_position(0,0) <= (player_position(0,0) + 1) REM (H_SIZE);
 					elsif(player_direction = left_d) then
 						snake_direction <= left_d;
 						for i in 1 to MAX_ELEMENTS - 1 loop
@@ -143,7 +147,7 @@ begin
 								player_position(i,1) <= -1;
 							end if;
 						end loop;
-						player_position(0,1) <= (player_position(0,1) + 1) REM (V_SIZE + 1);
+						player_position(0,1) <= (player_position(0,1) + 1) REM (V_SIZE );
 					elsif (player_direction = up_d) then
 						snake_direction <= up_d;
 						for i in 1 to MAX_ELEMENTS - 1 loop

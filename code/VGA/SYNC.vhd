@@ -13,7 +13,8 @@ port(
 	r,g,b : out std_logic_vector(3 downto 0);
 	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
 	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
-	apple_position : in coordinate
+	apple_position : in coordinate;
+	special_position : in coordinate
 );
 end entity;
 
@@ -73,6 +74,7 @@ variable hMatrix, vMatrix : integer := 0;
 variable draw : std_logic := '0';
 
 variable is_element : std_logic := '0';
+variable is_special : std_logic := '0';
 variable is_player1 : std_logic := '0';
 variable is_player2 : std_logic := '0';
 
@@ -196,6 +198,14 @@ begin
 							end if;
 						end if;
 					end if;
+					is_special := '0';
+					if(vMatrix = special_position(1)) then
+						if(hMatrix = special_position(0)) then
+							if(circleImage((hpos - H_OFFSET) REM PIXEL_SIZE, (vpos - V_OFFSET) REM PIXEL_SIZE) = '0') then	
+								is_special := '1';
+							end if;
+						end if;
+					end if;
 					
 					if(is_player1 = '1') then
 						r <= (others => '1');
@@ -205,6 +215,10 @@ begin
 						r <= (others => '0');
 						g <= (others => '0');
 						b <= (others => '1');
+					elsif(is_special = '1') then
+						r <= (others => '0');
+						g <= (others => '1');
+						b <= (others => '0');
 					elsif(is_element = '1') then
 						r <= (others => '1');
 						g <= (others => '1');

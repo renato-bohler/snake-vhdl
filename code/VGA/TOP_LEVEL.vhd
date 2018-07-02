@@ -41,7 +41,8 @@ component ps2_keyboard IS
 	 snake2Left	  : OUT STD_LOGIC;
 	 snake2Right  : OUT STD_LOGIC;
 	 snake2Special: OUT STD_LOGIC;
-	 gameStart    : OUT STD_LOGIC);
+	 gameStart    : OUT STD_LOGIC;
+	 appleSwap    : OUT STD_LOGIC);
 	 --test			  : OUT STD_LOGIC);
 END component;
 
@@ -55,7 +56,8 @@ port (
 	VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
 	player1 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
 	player2 : in coordinate_array (0 to MAX_ELEMENTS - 1, 0 to 1);
-	apple_position : in coordinate
+	apple_position : in coordinate;
+	special_position : in coordinate
 );
 end component;
 
@@ -98,11 +100,15 @@ component APPLE_CONTROLLER IS
 		clk 	  : in std_logic;
 		gameTick : in std_logic;
 		gameStarted : in std_logic;
+		swap			 : in std_logic;
 		player1AteApple 	  : in std_logic;
 		player2AteApple 	  : in std_logic;
+		player1AteSpecial 	  : in std_logic;
+		player2AteSpecial 	  : in std_logic;
 		player1 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 		player2 : in coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
-		apple_position : out coordinate
+		apple_position : out coordinate;
+		special_position : out coordinate
 	);
 end component;
 
@@ -122,18 +128,19 @@ signal up2, down2, left2, right2 , special2: std_logic;
 signal gameStartButton: std_logic;
 
 signal score1, score2 : integer;
-signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer , gameStarted: std_logic;
+signal snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, gameOver, timer , gameStarted, appleSwap: std_logic;
 signal apple_position : coordinate;
+signal special_position : coordinate;
 signal player1won, player2won : std_logic;
 begin
 
 	C3 : GAME_TIMER PORT MAP (clk, timer);
-	gameController	: GAME_CONTROLLER PORT MAP (timer, gameStartButton, player1, player2, apple_position, (2, 2), score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial,gameStarted,player1won, player2won);
-	Apple : APPLE_CONTROLLER PORT MAP (clk, timer,gameStarted, snake1AteApple, snake2AteApple, player1, player2, apple_position);
+	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2, gameStartButton, appleSwap);
+	gameController	: GAME_CONTROLLER PORT MAP (timer, gameStartButton, player1, player2, apple_position, special_position, score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial,gameStarted,player1won, player2won);
+	Apple : APPLE_CONTROLLER PORT MAP (clk, timer,gameStarted, appleSwap, snake1AteApple, snake2AteApple,snake1AteSpecial, snake2AteSpecial, player1, player2, apple_position, special_position);
 	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1,'1', up1, down1, left1, right1, special1,gameStarted, player1);
 	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2,'0', up2, down2, left2, right2, special2, gameStarted, player2);
-	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position);
-	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2, gameStartButton);
+	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position, special_position);
 	scoreC : ScoreController PORT MAP (score1, score2, timer, score_ssds);
 	-- Debug
 	led_out_collision <= gameOver;
