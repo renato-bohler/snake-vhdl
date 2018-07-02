@@ -7,6 +7,7 @@ entity PLAYER_CONTROLLER IS
 	port (
 		timer : in std_logic;
 		playerScore : in integer;
+		playerNumber : in std_logic;
 		up, down, left, right : in std_logic;
 		special : in std_logic;
 		game_start : in std_logic;
@@ -15,7 +16,8 @@ entity PLAYER_CONTROLLER IS
 end entity;
 
 architecture main of PLAYER_CONTROLLER is
-constant starting_player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-1,-1));
+constant starting_player_position1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-1,-1));
+constant starting_player_position2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,2), 1 => (2,2), 2 => (1,2), others => (-1,-1));
 signal player_position : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1) := (0 => (3,1), 1 => (2,1), 2 => (1,1), others => (-2,-2));
 signal player_direction : integer range 0 to 6;
 signal snake_direction : integer range 0 to 6;
@@ -65,15 +67,32 @@ begin
 	
 	process(timer)
 		variable specialActive 	 : std_logic := '0';
+		variable allowSpecial 	 : std_logic := '1';
+		variable timerCounter 	 : integer range 0 to 10000 := 0;
 		variable activeCounter   : integer range 0 to 10 := 0;
 		variable cooldownCounter : integer range 0 to 10 := 0;
 	begin
 		if(rising_edge(timer)) then
 			if(special = '1') then
+				if(allowSpecial = '1') then
+					specialActive := '1';
+					timerCounter := 0;
+					allowSpecial := '0';
+				end if;
+			end if;
+			timerCounter := (timerCounter + 1) MOD (10000);
+			if(timerCounter >= 2000) then
+				specialActive := '0';
+			end if;
+			if(timerCounter >= 10000-1) then
+				allowSpecial := '1';
+			end if;
+			if(specialActive = '1') then
 				accel_counter <= 50;
 			else
 				accel_counter <= 80;
 			end if;
+			
 		end if;
 	end process;
 	
@@ -144,7 +163,11 @@ begin
 					end if;
 				end if;
 			else
-				player_position <= starting_player_position;
+				if(playerNumber = '1') then
+					player_position <= starting_player_position1;
+				else
+					player_position <= starting_player_position2;
+				end if;
 			end if;
 			player <= player_position;
 		end if;

@@ -118,7 +118,6 @@ set_location_assignment PIN_J6 -to gameStartButton
 set_location_assignment PIN_J3 -to led_out_collision
 set_location_assignment PIN_J2 -to led_out_gameStart
 set_global_assignment -name VHDL_FILE RANDOM_POSITION.vhd
-set_global_assignment -name VHDL_FILE PLAYER2_CONTROLLER.vhd
 set_global_assignment -name VHDL_FILE hit.vhd
 set_global_assignment -name VHDL_FILE sound.vhd
 set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
