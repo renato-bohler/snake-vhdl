@@ -10,9 +10,9 @@ entity TOP_LEVEL IS
 		VGA_HS, VGA_VS : out std_logic;
 		VGA_R, VGA_G, VGA_B : out std_logic_vector(3 downto 0);
 		led_out_collision : out std_logic;
-		led_out_gameStart : out std_logic;
+		led_out_gameStart : out std_logic;		
 		buzzer : out std_logic;
-		score_ssds : out ssd_array(3 downto 0)
+		score_ssds : out ssd_array(3 downto 0)				
 	);
 end entity;
 
@@ -130,7 +130,8 @@ component sound is
     snake2AteApple : IN std_logic;
     snake1AteSpecial : IN std_logic;
     snake2AteSpecial : IN std_logic;
-    gameOver : IN std_logic;
+    player1won : IN std_logic;
+	 player2won : IN std_logic;
     buzzer : OUT std_logic
   );
 end component ; 
@@ -157,7 +158,7 @@ begin
 	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2,'0', up2, down2, left2, right2, special2, gameStarted, player2);
 	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position, special_position);
 	scoreC : ScoreController PORT MAP (score1, score2, gameStarted, timer, score_ssds);
-	soundController : sound PORT MAP (clk, snake1AteApple, snake2AteApple, snake1AteSpecial, snake1AteSpecial, gameOver);
+	soundController : sound PORT MAP (clk, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, player1won, player2won, buzzer);
 	-- Debug
 	led_out_collision <= gameOver;
 	led_out_gameStart <= gameStarted;

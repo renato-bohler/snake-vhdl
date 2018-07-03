@@ -13,7 +13,8 @@ entity sound is
     snake2AteApple : IN std_logic;
     snake1AteSpecial : IN std_logic;
     snake2AteSpecial : IN std_logic;
-    gameOver : IN std_logic;
+    player1won : IN std_logic;
+	 player2won : IN std_logic;
     buzzer : OUT std_logic
   ) ;
 end sound ; 
@@ -25,8 +26,8 @@ architecture arch of sound is
     stateSnake2AteSpecial_1, stateSnake2AteSpecial_2, 
     stateGameOver_1, stateGameOver_2, stateGameOver_3, stateGameOver_4,
     silence);
-  signal pr_state : state;
-	signal nx_state : state;  
+  signal pr_state : state := silence;
+  signal nx_state : state := silence;  
   signal fator : integer;	-- FATOR  = (Frequencia da placa) / 2 * (Frequencia desejada na saida do buzzer)
   signal rocker : std_logic := '0';	-- Variavel que "oscila" o buzzer
   signal tone_duration : integer range 1 to 10; -- Duracao do toque
@@ -35,7 +36,8 @@ architecture arch of sound is
   signal var_snake2AteApple : std_logic;
   signal var_snake1AteSpecial : std_logic;
   signal var_snake2AteSpecial : std_logic;
-  signal var_gameOver :  std_logic;
+  signal var_player1won : std_logic;
+  signal var_player2won : std_logic;
 begin
 
   buzzer <= rocker;
@@ -53,15 +55,18 @@ begin
         clk => clock, entrada => snake2AteSpecial, saida => var_snake2AteSpecial);
 
   hit5: entity work.hit PORT MAP (
-        clk => clock, entrada => gameOver, saida => var_gameOver);
-
+        clk => clock, entrada => player1won, saida => var_player1won);
+		  
+  hit6: entity work.hit PORT MAP (
+        clk => clock, entrada => player2won, saida => var_player2won);
+		  
   process(clock)
     variable counter_freq : integer := 0; -- Contador do tempo do toque 
     variable counter_fator: integer := 0; -- Contador que soma 1 ate igualar-se ao FATOR selecionado
     begin
       if rising_edge(clock) then 
 
-        if counter_freq < FREQ / tone_duration then
+        if counter_freq < FREQ / tone_duration and pr_state /= silence then
           
           counter_freq := counter_freq + 1;
           counter_fator := counter_fator + 1;
@@ -71,35 +76,23 @@ begin
             rocker <= not rocker;
           end if;
 
-        elsif counter_freq = FREQ / tone_duration then
-          if pr_state /= silence then
-            counter_freq := 0;
-          end if;
+        elsif counter_freq = FREQ / tone_duration then   			 	  
+          counter_freq := 0;          
           counter_fator := 0;
-          pr_state <= nx_state;
+			 pr_state <= nx_state;
         end if;
-
-        if var_snake1AteApple = '1' then
-          counter_freq := 0;
-          counter_fator := 0;
-          pr_state <= stateSnake1AteApple_1;
-        elsif var_snake2AteApple = '1' then
-          counter_freq := 0;
-          counter_fator := 0;
-          pr_state <= stateSnake2AteApple_1;
-        elsif var_snake1AteSpecial = '1' then
-          counter_freq := 0;
-          counter_fator := 0;
-          pr_state <= stateSnake1AteSpecial_1;
-        elsif var_snake2AteSpecial = '1' then
-          counter_freq := 0;
-          counter_fator := 0;
-          pr_state <= stateSnake2AteSpecial_1;      
-        elsif var_gameOver = '1' then
-          counter_freq := 0;
-          counter_fator := 0;
-          pr_state <= stateGameOver_1;
-        end if;
+		  
+		  if var_snake1AteApple = '1' then
+			 pr_state <= stateSnake1AteApple_1;
+		  elsif var_snake2AteApple = '1' then
+			 pr_state <= stateSnake2AteApple_1;
+		  elsif var_snake1AteSpecial = '1' then
+			 pr_state <= stateSnake1AteSpecial_1;
+		  elsif var_snake2AteSpecial = '1' then
+			 pr_state <= stateSnake2AteSpecial_1;
+		  elsif var_player1won = '1' or var_player2won = '1' then
+			 pr_state <= stateGameOver_1;
+		  end if;
 
       end if;
     end process ;
