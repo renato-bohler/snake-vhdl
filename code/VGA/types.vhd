@@ -4,11 +4,11 @@ use ieee.numeric_std.all;
 
 package display_types is
 	constant PIXEL_SIZE : integer := 16;
-	constant MAX_ELEMENTS : integer := 10;
+	constant MAX_ELEMENTS : integer := 12;
 	constant INIT_SIZE : integer := 3;
 	constant WIN_SIZE : integer := MAX_ELEMENTS;
 	constant FIXED_SCREEN_ELEMENTS : integer range 0 to 601:= 600;
-	constant ANIMATIONTIME : integer := 1 *50000;
+	constant ANIMATIONTIME : integer := 1 *100000;
 	constant PERIODTIME : integer := 50000000/ANIMATIONTIME;
 	constant SPECIALTIME : integer := 4;
 	constant SPECIALPOINTS : integer := 4;

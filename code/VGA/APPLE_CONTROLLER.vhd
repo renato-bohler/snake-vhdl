@@ -96,6 +96,7 @@ begin
 					singleAct := '0';
 				end if;
 			else
+				internalSpecial := (-1,-1);
 				eaten := '1';
 			end if;
 			special_position <= internalSpecial;

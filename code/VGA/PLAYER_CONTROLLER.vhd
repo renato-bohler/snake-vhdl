@@ -92,9 +92,9 @@ begin
 				allowSpecial := '1';
 			end if;
 			if(specialActive = '1') then
-				accel_counter <= 50;
+				accel_counter <= 25;
 			else
-				accel_counter <= 80;
+				accel_counter <= 35;
 			end if;
 			
 		end if;
@@ -132,7 +132,7 @@ begin
 							end if;						
 						end loop;
 						if(player_position(0,0) <= 0) then
-							player_position(0,0) <= H_SIZE;
+							player_position(0,0) <= H_SIZE - 1;
 						else	
 							player_position(0,0) <= player_position(0,0) - 1;
 						end if;
@@ -160,7 +160,7 @@ begin
 							end if;
 						end loop;
 						if(player_position(0,1) <= 0) then
-							player_position(0,1) <= V_SIZE;
+							player_position(0,1) <= V_SIZE - 1;
 						else
 							player_position(0,1) <= player_position(0,1) - 1;
 						end if;

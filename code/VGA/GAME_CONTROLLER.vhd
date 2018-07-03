@@ -154,17 +154,17 @@ begin
 			end if;
 			
 			if ((xCabecaCobra1 = specialMatrix(0) and yCabecaCobra1 = specialMatrix(1)) and singleAct3 = '0') then 
-				score1Var := score1Var + 3;
+				score1Var := score1Var + SPECIALPOINTS;
 				snake1AteSpecial <= '1';
 				singleAct3 := '1';
-			elsif(singleAct1 = '1' and (xCabecaCobra1 /= specialMatrix(0) or yCabecaCobra1 /= specialMatrix(1))) then
+			elsif(singleAct3 = '1' and (xCabecaCobra1 /= specialMatrix(0) or yCabecaCobra1 /= specialMatrix(1))) then
 				snake1AteSpecial <= '0';
 				singleAct3 := '0';
 			else
 				snake1AteSpecial <= '0';
 			end if;
 			if ((xCabecaCobra2 = specialMatrix(0) and yCabecaCobra2 = specialMatrix(1)) and singleAct4 = '0') then
-				score2Var := score2Var + 3;
+				score2Var := score2Var + SPECIALPOINTS;
 				snake2AteSpecial <= '1';
 				singleAct4 := '1';
 			elsif(singleAct4 = '1' and (xCabecaCobra2 /= specialMatrix(0) or yCabecaCobra2 /= specialMatrix(1))) then
