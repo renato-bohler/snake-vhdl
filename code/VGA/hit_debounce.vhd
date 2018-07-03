@@ -4,7 +4,7 @@ library ieee ;
 
 -- Retorna o sinal da entrada em um período de clock
 
-entity hit is
+entity hit_debounce is
   generic (
     FREQ: natural := 50_000_000 --50 Mhz
   );
@@ -13,22 +13,26 @@ entity hit is
     entrada: in std_logic;
     saida: out std_logic
   ) ;
-end hit ; 
+end hit_debounce ; 
 
-architecture arch of hit is     
+architecture arch of hit_debounce is     
     signal entrada_anterior : std_logic;
+	 signal entrada_debounce : std_logic;
 begin
+
+	deb: entity work.debounce PORT MAP (
+        clk => clk, button => entrada, result => entrada_debounce);
 
     process(clk)      
     begin
         if rising_edge(clk) then
           -- 1 => botão pressionado
-          if entrada = '1' and entrada_anterior /= entrada then               
+          if entrada_debounce = '1' and entrada_anterior /= entrada_debounce then               
             saida <= '1';
           else
             saida <= '0';
           end if ;
-          entrada_anterior <= entrada;
+          entrada_anterior <= entrada_debounce;
         end if;
     end process ;
 end architecture ;

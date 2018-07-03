@@ -17,18 +17,22 @@ end hit ;
 
 architecture arch of hit is     
     signal entrada_anterior : std_logic;
+	 signal entrada_debounce : std_logic;
 begin
+
+	deb: entity work.debounce PORT MAP (
+        clk => clk, button => entrada, result => entrada_debounce);
 
     process(clk)      
     begin
         if rising_edge(clk) then
           -- 1 => botão pressionado
-          if entrada = '1' and entrada_anterior /= entrada then               
+          if entrada = '1' and entrada_anterior /= entrada_debounce then               
             saida <= '1';
           else
             saida <= '0';
           end if ;
-          entrada_anterior <= entrada;
+          entrada_anterior <= entrada_debounce;
         end if;
     end process ;
 end architecture ;
