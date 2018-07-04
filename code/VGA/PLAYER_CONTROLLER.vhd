@@ -11,6 +11,7 @@ entity PLAYER_CONTROLLER IS
 		up, down, left, right : in std_logic;
 		special : in std_logic;
 		game_start : in std_logic;
+		player1won, player2won : in std_logic;
 		player : out coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1)
 	);
 end entity;
@@ -104,7 +105,7 @@ begin
 		variable timerCounter : integer range 0 to 120:= 0;
 	begin
 		if(rising_edge(timer)) then
-			if(game_start = '1') then
+			if(game_start = '1' and player1won = '0' and player2won = '0') then
 				timerCounter := timerCounter +1;
 				if(timerCounter > accel_counter) then
 					timerCounter := 0;

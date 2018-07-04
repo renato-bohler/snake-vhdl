@@ -12,7 +12,8 @@ entity TOP_LEVEL IS
 		led_out_collision : out std_logic;
 		led_out_gameStart : out std_logic;		
 		buzzer : out std_logic;
-		score_ssds : out ssd_array(3 downto 0)				
+		score_ssds : out ssd_array(3 downto 0);
+		ledOutput : out std_logic
 	);
 end entity;
 
@@ -70,6 +71,7 @@ component PLAYER_CONTROLLER IS
 		up, down, left, right : in std_logic;
 		special : in std_logic;
 		game_start : std_logic;
+		player1won, player2won : in std_logic;
 		player : out coordinate_array(MAX_ELEMENTS - 1 downto 0, 0 to 1)
 	);
 end component;
@@ -137,6 +139,19 @@ component sound is
 end component ; 
 
 
+component LED_CONTROLLER IS
+	port (
+		gameTick : in std_logic;
+		player1AteApple : in std_logic;
+		player2AteApple : in std_logic;
+		player1AteSpecial : in std_logic;
+		player2AteSpecial : in std_logic;
+		player1Won : in std_logic;
+		player2Won : in std_logic;
+		ledOutput : out std_logic
+	);
+end component;
+
 signal player1 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal player2 : coordinate_array(0 to MAX_ELEMENTS - 1, 0 to 1);
 signal up1, down1, left1, right1 , special1: std_logic;
@@ -154,11 +169,12 @@ begin
 	keyboard : ps2_keyboard PORT MAP (clk, ps2_clk, ps2_data, up1, down1, left1, right1, special1, up2, down2, left2, right2, special2, gameStartButton, appleSwap);
 	gameController	: GAME_CONTROLLER PORT MAP (timer, gameStartButton, player1, player2, apple_position, special_position, score1, score2, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial,gameStarted,player1won, player2won);
 	Apple : APPLE_CONTROLLER PORT MAP (clk, timer,gameStarted, appleSwap, snake1AteApple, snake2AteApple,snake1AteSpecial, snake2AteSpecial, player1, player2, apple_position, special_position);
-	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1,'1', up1, down1, left1, right1, special1,gameStarted, player1);
-	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2,'0', up2, down2, left2, right2, special2, gameStarted, player2);
+	p1 : PLAYER_CONTROLLER PORT MAP (timer,score1,'1', up1, down1, left1, right1, special1,gameStarted,player1won, player2won, player1);
+	p2 : PLAYER_CONTROLLER PORT MAP (timer,score2,'0', up2, down2, left2, right2, special2, gameStarted,player1won, player2won, player2);
 	vga1 : VGA PORT MAP (clk, gameStarted, player1won, player2won, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, player1, player2, apple_position, special_position);
 	scoreC : ScoreController PORT MAP (score1, score2, gameStarted, timer, score_ssds);
 	soundController : sound PORT MAP (clk, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, player1won, player2won, buzzer);
+	ledController : LED_CONTROLLER PORT MAP(timer, snake1AteApple, snake2AteApple, snake1AteSpecial, snake2AteSpecial, player1won, player2won, ledOutput);
 	-- Debug
 	led_out_collision <= gameOver;
 	led_out_gameStart <= gameStarted;
